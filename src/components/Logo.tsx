@@ -23,8 +23,8 @@ const Logo: React.FC<LogoProps> = ({
     <Image
       src={logoPath}
       alt={altText}
-      width={width || (variant === 'button' ? 200 : 150)}
-      height={height || (variant === 'button' ? 60 : 45)}
+      width={typeof width === 'number' ? width : (variant === 'button' ? 200 : 150)}
+      height={typeof height === 'number' ? height : (variant === 'button' ? 60 : 45)}
       className={className}
       priority
     />
