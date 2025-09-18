@@ -14,108 +14,83 @@ import {
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 
-// Custom Roof Panel Node
+// Custom Roof Panel Node - Simple Triangle
 const RoofPanelNode = ({ data, selected }: { data: any; selected: boolean }) => {
   const [color, setColor] = useState(data.color || '#2c3e50')
-  const [roofType, setRoofType] = useState(data.roofType || 'corrugated')
-  const [zoomLevel, setZoomLevel] = useState(data.zoomLevel || 1)
+  const [size, setSize] = useState(data.size || 1)
 
   const handleColorChange = (newColor: string) => {
     setColor(newColor)
     data.onColorChange?.(data.id, newColor)
   }
 
-  const handleRoofTypeChange = (newType: string) => {
-    setRoofType(newType)
-    data.onRoofTypeChange?.(data.id, newType)
-  }
-
-  const handleZoomChange = (newZoom: number) => {
-    setZoomLevel(newZoom)
-    data.onZoomChange?.(data.id, newZoom)
+  const handleSizeChange = (newSize: number) => {
+    setSize(newSize)
+    data.onSizeChange?.(data.id, newSize)
   }
 
   return (
     <div 
-      className="bg-white rounded-lg shadow-lg border-2 p-4 min-w-[200px]"
+      className="bg-white rounded-lg shadow-lg border-2 p-4"
       style={{ 
         borderColor: selected ? '#3b82f6' : '#e5e7eb',
-        background: `linear-gradient(135deg, ${color} 0%, ${color}dd 50%, ${color}aa 100%)`
+        width: '200px'
       }}
     >
-      <div className="space-y-3">
-        {/* Color Control */}
-        <div className="flex items-center space-x-2">
-          <span className="text-sm font-medium text-white">Color:</span>
-          <input
-            type="color"
-            value={color}
-            onChange={(e) => handleColorChange(e.target.value)}
-            className="w-8 h-8 rounded border-2 border-white cursor-pointer"
-          />
-          <div className="flex space-x-1">
-            {['#2c3e50', '#34495e', '#1a252f', '#8b4513', '#654321', '#ff0071'].map((presetColor) => (
-              <button
-                key={presetColor}
-                onClick={() => handleColorChange(presetColor)}
-                className="w-6 h-6 rounded border-2 border-white hover:border-blue-300"
-                style={{ backgroundColor: presetColor }}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Roof Type Control */}
-        <div className="flex items-center space-x-2">
-          <span className="text-sm font-medium text-white">Type:</span>
-          <div className="flex space-x-2">
-            <button
-              onClick={() => handleRoofTypeChange('corrugated')}
-              className={`px-2 py-1 rounded text-xs ${
-                roofType === 'corrugated' ? 'bg-white text-gray-800' : 'bg-white/20 text-white'
-              }`}
-            >
-              Corrugated
-            </button>
-            <button
-              onClick={() => handleRoofTypeChange('flat')}
-              className={`px-2 py-1 rounded text-xs ${
-                roofType === 'flat' ? 'bg-white text-gray-800' : 'bg-white/20 text-white'
-              }`}
-            >
-              Flat
-            </button>
-          </div>
-        </div>
-
-        {/* Zoom Level Control */}
-        <div className="flex items-center space-x-2">
-          <span className="text-sm font-medium text-white">Zoom:</span>
-          <input
-            type="range"
-            min="0.5"
-            max="2"
-            step="0.1"
-            value={zoomLevel}
-            onChange={(e) => handleZoomChange(parseFloat(e.target.value))}
-            className="flex-1"
-          />
-          <span className="text-xs text-white">{Math.round(zoomLevel * 100)}%</span>
-        </div>
-
-        {/* 3D Preview */}
-        <div className="mt-3 p-2 bg-black/20 rounded">
-          <div className="text-center text-white text-xs font-medium mb-2">Preview</div>
+      <div className="space-y-4">
+        {/* Triangle Roof */}
+        <div className="flex justify-center">
           <div 
-            className="w-full h-16 rounded"
+            className="triangle"
             style={{
-              background: `linear-gradient(45deg, ${color} 0%, ${color}dd 50%, ${color}aa 100%)`,
-              transform: `scale(${zoomLevel})`,
-              backgroundImage: roofType === 'corrugated' 
-                ? 'repeating-linear-gradient(90deg, transparent 0px, rgba(255,255,255,0.1) 2px, transparent 4px)'
-                : 'none'
+              width: 0,
+              height: 0,
+              borderLeft: `${40 * size}px solid transparent`,
+              borderRight: `${40 * size}px solid transparent`,
+              borderBottom: `${60 * size}px solid ${color}`,
+              filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))'
             }}
           />
+        </div>
+
+        {/* Color Control */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-gray-700">Color:</label>
+          <div className="flex items-center space-x-2">
+            <input
+              type="color"
+              value={color}
+              onChange={(e) => handleColorChange(e.target.value)}
+              className="w-8 h-8 rounded border-2 border-gray-300 cursor-pointer"
+            />
+            <div className="flex space-x-1">
+              {['#2c3e50', '#8b4513', '#654321', '#34495e', '#1a252f', '#ff6b35'].map((presetColor) => (
+                <button
+                  key={presetColor}
+                  onClick={() => handleColorChange(presetColor)}
+                  className="w-6 h-6 rounded border-2 border-gray-300 hover:border-blue-400"
+                  style={{ backgroundColor: presetColor }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Size Control */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-gray-700">Size:</label>
+          <div className="flex items-center space-x-2">
+            <input
+              type="range"
+              min="0.7"
+              max="1.5"
+              step="0.1"
+              value={size}
+              onChange={(e) => handleSizeChange(parseFloat(e.target.value))}
+              className="flex-1"
+            />
+            <span className="text-xs text-gray-600 w-12">{Math.round(size * 100)}%</span>
+          </div>
         </div>
       </div>
     </div>
@@ -156,75 +131,19 @@ const initialNodes = [
   {
     id: '1',
     type: 'roofPanel',
-    position: { x: 0, y: 150 },
+    position: { x: 200, y: 100 },
     data: { 
-      label: 'Main Roof Panel',
+      label: 'Roof Sample',
       color: '#2c3e50',
-      roofType: 'corrugated',
-      zoomLevel: 1,
+      size: 1,
       onColorChange: () => {},
-      onRoofTypeChange: () => {},
-      onZoomChange: () => {}
+      onSizeChange: () => {}
     },
-    ...nodeDefaults,
-  },
-  {
-    id: '2',
-    type: 'roofPanel',
-    position: { x: 300, y: 0 },
-    data: { 
-      label: 'Side Panel',
-      color: '#34495e',
-      roofType: 'corrugated',
-      zoomLevel: 1,
-      onColorChange: () => {},
-      onRoofTypeChange: () => {},
-      onZoomChange: () => {}
-    },
-    ...nodeDefaults,
-  },
-  {
-    id: '3',
-    type: 'roofPanel',
-    position: { x: 300, y: 150 },
-    data: { 
-      label: 'End Panel',
-      color: '#1a252f',
-      roofType: 'flat',
-      zoomLevel: 1,
-      onColorChange: () => {},
-      onRoofTypeChange: () => {},
-      onZoomChange: () => {}
-    },
-    ...nodeDefaults,
-  },
-  {
-    id: '4',
-    type: 'roofStructure',
-    position: { x: 300, y: 300 },
-    data: { label: 'Support Beam' },
     ...nodeDefaults,
   },
 ]
 
-const initialEdges = [
-  {
-    id: 'e1-2',
-    source: '1',
-    target: '2',
-    animated: true,
-  },
-  {
-    id: 'e1-3',
-    source: '1',
-    target: '3',
-  },
-  {
-    id: 'e1-4',
-    source: '1',
-    target: '4',
-  },
-]
+const initialEdges = []
 
 const InteractiveRoofEditor = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes as any)
@@ -245,21 +164,11 @@ const InteractiveRoofEditor = () => {
     )
   }, [setNodes])
 
-  const handleRoofTypeChange = useCallback((nodeId: string, newType: string) => {
+  const handleSizeChange = useCallback((nodeId: string, newSize: number) => {
     setNodes((nds: any) =>
       nds.map((node: any) =>
         node.id === nodeId && node.type === 'roofPanel'
-          ? { ...node, data: { ...node.data, roofType: newType } }
-          : node
-      )
-    )
-  }, [setNodes])
-
-  const handleZoomChange = useCallback((nodeId: string, newZoom: number) => {
-    setNodes((nds: any) =>
-      nds.map((node: any) =>
-        node.id === nodeId && node.type === 'roofPanel'
-          ? { ...node, data: { ...node.data, zoomLevel: newZoom } }
+          ? { ...node, data: { ...node.data, size: newSize } }
           : node
       )
     )
@@ -273,8 +182,7 @@ const InteractiveRoofEditor = () => {
         data: {
           ...node.data,
           onColorChange: handleColorChange,
-          onRoofTypeChange: handleRoofTypeChange,
-          onZoomChange: handleZoomChange
+          onSizeChange: handleSizeChange
         }
       }
     }
@@ -317,20 +225,19 @@ const InteractiveRoofEditor = () => {
             
             {/* Designer Info */}
             <div className="border-t pt-2">
-              <h4 className="font-medium text-gray-700 text-sm mb-2">Interactive Roof Designer</h4>
+              <h4 className="font-medium text-gray-700 text-sm mb-2">Simple Roof Sample</h4>
               <div className="text-xs text-gray-600 space-y-1">
-                <div>Panels: {nodes.filter(n => n.type === 'roofPanel').length}</div>
-                <div>Structures: {nodes.filter(n => n.type === 'roofStructure').length}</div>
-                <div>Connections: {edges.length}</div>
+                <div>Triangle Roof: 1</div>
+                <div>Color: {nodes[0]?.data?.color || '#2c3e50'}</div>
+                <div>Size: {Math.round((nodes[0]?.data?.size || 1) * 100)}%</div>
               </div>
             </div>
             
             {/* Instructions */}
             <div className="text-xs text-gray-500 space-y-1">
-              <div>• Drag nodes to move them</div>
-              <div>• Click panels to change color & type</div>
-              <div>• Use zoom slider to adjust scale</div>
-              <div>• Drag from handles to connect</div>
+              <div>• Change color with picker or presets</div>
+              <div>• Adjust size with slider</div>
+              <div>• Drag to move triangle</div>
             </div>
           </div>
         </Panel>
