@@ -298,18 +298,34 @@ const InteractiveRoofEditor = () => {
         />
         
         <Panel position="top-left" className="bg-white rounded-lg shadow-lg p-4 m-4">
-          <div className="space-y-2">
-            <h3 className="font-semibold text-gray-800">Interactive Roof Designer</h3>
-            <div className="text-sm text-gray-600">
-              <div>Panels: {nodes.filter(n => n.type === 'roofPanel').length}</div>
-              <div>Structures: {nodes.filter(n => n.type === 'roofStructure').length}</div>
-              <div>Connections: {edges.length}</div>
+          <div className="space-y-3">
+            {/* RRS Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-b from-blue-400 to-orange-400 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">R</span>
+              </div>
+              <div>
+                <div className="font-semibold text-gray-800 text-sm">Reliable Roofing</div>
+                <div className="text-xs text-gray-500">Solutions</div>
+              </div>
             </div>
-            <div className="text-xs text-gray-500">
-              • Drag nodes to move them
-              • Click panels to change color & type
-              • Use zoom slider to adjust scale
-              • Drag from handles to connect
+            
+            {/* Designer Info */}
+            <div className="border-t pt-2">
+              <h4 className="font-medium text-gray-700 text-sm mb-2">Interactive Roof Designer</h4>
+              <div className="text-xs text-gray-600 space-y-1">
+                <div>Panels: {nodes.filter(n => n.type === 'roofPanel').length}</div>
+                <div>Structures: {nodes.filter(n => n.type === 'roofStructure').length}</div>
+                <div>Connections: {edges.length}</div>
+              </div>
+            </div>
+            
+            {/* Instructions */}
+            <div className="text-xs text-gray-500 space-y-1">
+              <div>• Drag nodes to move them</div>
+              <div>• Click panels to change color & type</div>
+              <div>• Use zoom slider to adjust scale</div>
+              <div>• Drag from handles to connect</div>
             </div>
           </div>
         </Panel>
