@@ -42,44 +42,42 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-3"
           >
-            {/* Logo Container with Dark Background */}
-            <div className="bg-gray-800 px-4 py-3 rounded-lg shadow-lg">
-              {/* Roof Icon */}
-              <div className="flex justify-center mb-2">
-                <svg 
-                  width="32" 
-                  height="24" 
-                  viewBox="0 0 32 24" 
-                  fill="none" 
-                  className="text-white"
-                >
-                  <path 
-                    d="M16 2L4 10L16 18L28 10L16 2Z" 
-                    stroke="currentColor" 
-                    strokeWidth="3" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                  <path 
-                    d="M4 10L16 18L28 10" 
-                    stroke="currentColor" 
-                    strokeWidth="3" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-              
-              {/* RRS Text */}
-              <div className="text-center">
-                <h1 className="text-2xl font-bold text-white mb-1">RRS</h1>
-                <div className="text-xs text-white leading-tight">
-                  <div>RELIABLE ROOFING</div>
-                  <div>SOLUTIONS</div>
-                </div>
-              </div>
+            {/* Roof Icon */}
+            <div className="flex items-center justify-center">
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                className="text-primary-600"
+              >
+                <path 
+                  d="M12 2L2 8L12 14L22 8L12 2Z" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+                <path 
+                  d="M2 8L12 14L22 8" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            
+            {/* RRS Text */}
+            <div className="flex items-center space-x-2">
+              <h1 className="text-2xl font-bold text-gray-900">RRS</h1>
+              <div className="h-6 w-px bg-gray-300"></div>
+            </div>
+            
+            {/* Company Name */}
+            <div>
+              <h2 className="text-lg font-semibold text-gray-800">Reliable Roofing</h2>
+              <p className="text-sm text-gray-600">Solutions</p>
             </div>
           </motion.div>
 
@@ -130,44 +128,34 @@ const Header = () => {
         >
           <div className="py-4 space-y-4 border-t border-gray-200">
             {/* Mobile Logo */}
-            <div className="flex justify-center pb-4 border-b border-gray-100">
-              <div className="bg-gray-800 px-3 py-2 rounded-lg shadow-lg">
-                {/* Roof Icon */}
-                <div className="flex justify-center mb-1">
-                  <svg 
-                    width="24" 
-                    height="18" 
-                    viewBox="0 0 32 24" 
-                    fill="none" 
-                    className="text-white"
-                  >
-                    <path 
-                      d="M16 2L4 10L16 18L28 10L16 2Z" 
-                      stroke="currentColor" 
-                      strokeWidth="2.5" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                    <path 
-                      d="M4 10L16 18L28 10" 
-                      stroke="currentColor" 
-                      strokeWidth="2.5" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                  </svg>
-                </div>
-                
-                {/* RRS Text */}
-                <div className="text-center">
-                  <h3 className="text-lg font-bold text-white mb-1">RRS</h3>
-                  <div className="text-xs text-white leading-tight">
-                    <div>RELIABLE ROOFING</div>
-                    <div>SOLUTIONS</div>
-                  </div>
-                </div>
+            <div className="flex items-center space-x-3 pb-4 border-b border-gray-100">
+              <div className="flex items-center justify-center">
+                <svg 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  className="text-primary-600"
+                >
+                  <path 
+                    d="M12 2L2 8L12 14L22 8L12 2Z" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                  <path 
+                    d="M2 8L12 14L22 8" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900">RRS</h3>
+                <p className="text-xs text-gray-600">Reliable Roofing Solutions</p>
               </div>
             </div>
             
