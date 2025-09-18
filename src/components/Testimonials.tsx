@@ -22,47 +22,47 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Anna Petrova',
-      location: 'Riga, Latvia',
+      name: 'Sarah Mitchell',
+      location: 'Auckland, New Zealand',
       rating: 5,
       project: 'Complete Roof Replacement',
       date: 'March 2024',
-      text: 'Exceptional work! They replaced our entire roof in just 3 days. Professional, clean, and the quality is outstanding. The team was punctual, respectful, and left our property spotless.',
+      text: 'Exceptional work! They replaced our entire roof in just 3 days. Professional, clean, and the quality is outstanding. Perfect for Auckland weather conditions.',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      features: ['3-day completion', 'Clean work site', 'Quality materials', 'Professional team']
+      features: ['3-day completion', 'Clean work site', 'Colorsteel materials', 'Professional team']
     },
     {
       id: 2,
-      name: 'Māris Ozols',
-      location: 'Riga, Latvia',
+      name: 'James Thompson',
+      location: 'Auckland, New Zealand',
       rating: 5,
       project: 'Emergency Leak Repair',
       date: 'February 2024',
-      text: 'Emergency repair service saved us from major water damage. Quick response and excellent workmanship. They arrived within 2 hours and fixed the problem immediately.',
+      text: 'Emergency repair service saved us from major water damage during the Auckland storm. Quick response and excellent workmanship. They arrived within 2 hours.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      features: ['2-hour response', 'Emergency service', 'Quick fix', 'Water damage prevention']
+      features: ['2-hour response', 'Emergency service', 'Storm damage repair', 'Water damage prevention']
     },
     {
       id: 3,
-      name: 'Elena Kuzmina',
-      location: 'Riga, Latvia',
+      name: 'Emma Wilson',
+      location: 'Auckland, New Zealand',
       rating: 5,
       project: 'Commercial Roofing',
       date: 'January 2024',
-      text: 'Outstanding commercial roofing service. They handled our large warehouse project with expertise and professionalism. The roof has been perfect through all weather conditions.',
+      text: 'Outstanding commercial roofing service. They handled our large Auckland warehouse project with expertise and professionalism. Perfect through all weather conditions.',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
       features: ['Large project', 'Weather tested', 'Commercial expertise', 'Long-term durability']
     },
     {
       id: 4,
-      name: 'Jānis Bērziņš',
-      location: 'Riga, Latvia',
+      name: 'Michael Chen',
+      location: 'Auckland, New Zealand',
       rating: 5,
       project: 'Gutter Installation',
       date: 'December 2023',
-      text: 'Professional gutter installation and maintenance service. They solved our water drainage issues completely. Highly recommend their expertise and fair pricing.',
+      text: 'Professional gutter installation and maintenance service. They solved our Auckland stormwater drainage issues completely. Highly recommend their expertise.',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      features: ['Drainage solution', 'Fair pricing', 'Expert installation', 'Problem solving']
+      features: ['Stormwater solution', 'Fair pricing', 'Expert installation', 'Problem solving']
     }
   ]
 

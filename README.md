@@ -1,6 +1,6 @@
-# Reliable Roofing Solutions - Landing Page
+# Reliable Roofing Solutions - Auckland Landing Page
 
-A modern, responsive landing page for Reliable Roofing Solutions built with Next.js, TypeScript, and Tailwind CSS. Features interactive 3D elements, smooth animations, and a professional design optimized for conversion.
+A modern, responsive landing page for Reliable Roofing Solutions in Auckland, New Zealand. Built with Next.js, TypeScript, and Tailwind CSS. Features interactive 3D elements, smooth animations, and a professional design optimized for conversion in the New Zealand market.
 
 ## 🚀 Features
 
@@ -8,11 +8,13 @@ A modern, responsive landing page for Reliable Roofing Solutions built with Next
 - **Interactive 3D Roof**: Mouse-responsive 3D roof element in the hero section
 - **Responsive**: Fully responsive design that works on all devices
 - **Performance Optimized**: Fast loading with Next.js optimizations
-- **SEO Ready**: Proper meta tags and structured data for search engines
+- **SEO Ready**: Proper meta tags and structured data for New Zealand search engines
 - **Accessibility**: WCAG compliant with proper semantic HTML
 - **Contact Form**: Functional contact form with validation
-- **Project Gallery**: Interactive gallery with before/after comparisons
-- **Testimonials**: Customer testimonials with ratings and project details
+- **Project Gallery**: Interactive gallery with Auckland project examples
+- **Testimonials**: Customer testimonials from Auckland clients
+- **NZ Building Code**: Compliant with New Zealand building standards
+- **Colorsteel Integration**: Specialized for New Zealand roofing materials
 
 ## 🛠️ Tech Stack
 
@@ -122,9 +124,9 @@ colors: {
 
 For questions about this project or roofing services:
 
-- **Phone**: +371 20 123 456
-- **Email**: info@reliableroofing.lv
-- **Website**: [reliableroofing.lv](https://reliableroofing.lv)
+- **Phone**: +64 9 123 4567
+- **Email**: info@reliableroofing.co.nz
+- **Website**: [reliableroofing.co.nz](https://reliableroofing.co.nz)
 
 ## 📄 License
 

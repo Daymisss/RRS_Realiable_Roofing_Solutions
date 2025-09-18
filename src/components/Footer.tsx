@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Your trusted roofing partner in Riga. We combine decades of experience 
+              Your trusted roofing partner in Auckland. We combine decades of experience 
               with quality materials and expert craftsmanship to protect your most valuable asset.
             </p>
 
@@ -89,22 +89,22 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400" />
                 <div>
-                  <div className="font-semibold">+371 20 123 456</div>
+                  <div className="font-semibold">+64 9 123 4567</div>
                   <div className="text-sm text-gray-400">24/7 Emergency Service</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
                 <div>
-                  <div className="font-semibold">info@reliableroofing.lv</div>
+                  <div className="font-semibold">info@reliableroofing.co.nz</div>
                   <div className="text-sm text-gray-400">General Inquiries</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400" />
                 <div>
-                  <div className="font-semibold">Riga, Latvia</div>
-                  <div className="text-sm text-gray-400">Serving Greater Riga Area</div>
+                  <div className="font-semibold">Auckland, New Zealand</div>
+                  <div className="text-sm text-gray-400">Serving Greater Auckland Area</div>
                 </div>
               </div>
             </div>

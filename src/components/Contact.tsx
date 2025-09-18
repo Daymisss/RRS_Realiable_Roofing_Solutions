@@ -45,25 +45,25 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+371 20 123 456', '+371 20 123 457'],
+      details: ['+64 9 123 4567', '+64 21 123 4567'],
       description: 'Call us anytime for emergency service'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@reliableroofing.lv', 'emergency@reliableroofing.lv'],
+      details: ['info@reliableroofing.co.nz', 'emergency@reliableroofing.co.nz'],
       description: 'Send us your project details'
     },
     {
       icon: MapPin,
       title: 'Service Area',
-      details: ['Riga and surrounding areas', 'Within 50km radius'],
-      description: 'We serve the greater Riga region'
+      details: ['Auckland and surrounding areas', 'Within 50km radius of Auckland CBD'],
+      description: 'We serve the greater Auckland region'
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Mon-Fri: 8:00 AM - 6:00 PM', 'Sat: 9:00 AM - 4:00 PM', 'Emergency: 24/7'],
+      details: ['Mon-Fri: 7:00 AM - 6:00 PM', 'Sat: 8:00 AM - 4:00 PM', 'Emergency: 24/7'],
       description: 'Available when you need us'
     }
   ]
@@ -216,7 +216,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                      placeholder="+371 20 123 456"
+                      placeholder="+64 9 123 4567"
                     />
                   </div>
                 </div>
@@ -385,7 +385,7 @@ const Contact = () => {
                 Storm damage? Leak? We provide 24/7 emergency roofing services to protect your property.
               </p>
               <motion.a
-                href="tel:+37120123456"
+                href="tel:+6491234567"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center space-x-2 bg-white text-red-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"

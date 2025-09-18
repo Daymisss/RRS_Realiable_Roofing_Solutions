@@ -23,17 +23,17 @@ const ProjectGallery = () => {
   const projects = [
     {
       id: 1,
-      title: 'Modern Residential Roof Replacement',
-      location: 'Riga, Latvia',
+      title: 'Modern Auckland Residential Roof',
+      location: 'Auckland, New Zealand',
       date: '2024',
       type: 'Complete Roof Replacement',
-      description: 'Full roof replacement using premium metal roofing materials with enhanced insulation and modern gutters.',
+      description: 'Full roof replacement using premium Colorsteel materials with enhanced insulation and modern gutters designed for Auckland weather.',
       images: [
         'https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
       ],
-      features: ['Metal roofing', 'Enhanced insulation', 'Modern gutters', '10-year warranty'],
+      features: ['Colorsteel roofing', 'Enhanced insulation', 'Stormwater management', 'NZ Building Code compliant'],
       beforeAfter: {
         before: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         after: 'https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
@@ -41,11 +41,11 @@ const ProjectGallery = () => {
     },
     {
       id: 2,
-      title: 'Commercial Warehouse Roofing',
-      location: 'Riga, Latvia',
+      title: 'Auckland Commercial Warehouse',
+      location: 'Auckland, New Zealand',
       date: '2024',
       type: 'Commercial Installation',
-      description: 'Large-scale commercial roofing project with industrial-grade materials and specialized installation techniques.',
+      description: 'Large-scale commercial roofing project with industrial-grade materials and specialized installation techniques for Auckland industrial zone.',
       images: [
         'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -59,11 +59,11 @@ const ProjectGallery = () => {
     },
     {
       id: 3,
-      title: 'Emergency Storm Damage Repair',
-      location: 'Riga, Latvia',
+      title: 'Auckland Storm Damage Repair',
+      location: 'Auckland, New Zealand',
       date: '2024',
       type: 'Emergency Repair',
-      description: 'Rapid response to storm damage with complete roof restoration and weatherproofing improvements.',
+      description: 'Rapid response to Auckland storm damage with complete roof restoration and weatherproofing improvements.',
       images: [
         'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -77,17 +77,17 @@ const ProjectGallery = () => {
     },
     {
       id: 4,
-      title: 'Historic Building Restoration',
-      location: 'Riga, Latvia',
+      title: 'Heritage Auckland Building',
+      location: 'Auckland, New Zealand',
       date: '2024',
-      type: 'Restoration',
-      description: 'Careful restoration of historic building roof while maintaining architectural integrity and heritage value.',
+      type: 'Heritage Restoration',
+      description: 'Careful restoration of heritage Auckland building roof while maintaining architectural integrity and heritage value.',
       images: [
         'https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
       ],
-      features: ['Heritage materials', 'Historical accuracy', 'Expert craftsmanship', 'Long-term preservation'],
+      features: ['Heritage materials', 'Historical accuracy', 'Expert craftsmanship', 'Heritage compliance'],
       beforeAfter: {
         before: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         after: 'https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'

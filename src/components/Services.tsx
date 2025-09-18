@@ -22,26 +22,26 @@ const Services = () => {
     {
       icon: Home,
       title: 'Residential Roofing',
-      description: 'Complete roof installation and replacement for homes using premium materials and expert craftsmanship.',
-      features: ['New roof installation', 'Roof replacement', 'Material selection', 'Warranty included']
+      description: 'Complete roof installation and replacement for Auckland homes using premium Colorsteel and other NZ-approved materials.',
+      features: ['New roof installation', 'Roof replacement', 'Colorsteel roofing', 'NZ Building Code compliance']
     },
     {
       icon: Wrench,
       title: 'Roof Repairs',
-      description: 'Fast and reliable repair services to fix leaks, storm damage, and other roofing issues.',
-      features: ['Leak repairs', 'Storm damage', 'Emergency service', 'Quick response']
+      description: 'Fast and reliable repair services to fix leaks, storm damage, and other roofing issues common in Auckland weather.',
+      features: ['Leak repairs', 'Storm damage', 'Emergency service', 'Weatherproofing']
     },
     {
       icon: Building,
       title: 'Commercial Roofing',
-      description: 'Professional roofing solutions for businesses, warehouses, and commercial properties.',
-      features: ['Flat roof systems', 'Industrial roofing', 'Maintenance plans', 'Bulk pricing']
+      description: 'Professional roofing solutions for Auckland businesses, warehouses, and commercial properties.',
+      features: ['Flat roof systems', 'Industrial roofing', 'Maintenance plans', 'Commercial warranties']
     },
     {
       icon: Droplets,
       title: 'Gutters & Downpipes',
-      description: 'Complete gutter installation, repair, and maintenance to protect your property from water damage.',
-      features: ['Gutter installation', 'Downpipe repair', 'Cleaning service', 'Leaf protection']
+      description: 'Complete gutter installation, repair, and maintenance to handle Auckland\'s heavy rainfall and protect your property.',
+      features: ['Gutter installation', 'Downpipe repair', 'Leaf protection', 'Stormwater management']
     }
   ]
 
@@ -102,7 +102,8 @@ const Services = () => {
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             From new installations to emergency repairs, we provide comprehensive roofing solutions 
-            that protect your most valuable asset with unmatched quality and reliability.
+            that protect your most valuable asset with unmatched quality and reliability. Specializing in 
+            Auckland's unique climate and building requirements.
           </motion.p>
         </motion.div>
 

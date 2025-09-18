@@ -69,7 +69,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>+371 20 123 456</span>
+              <span>+64 9 123 4567</span>
             </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -110,7 +110,7 @@ const Header = () => {
             <div className="pt-4 space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Phone className="w-4 h-4" />
-                <span>+371 20 123 456</span>
+                <span>+64 9 123 4567</span>
               </div>
               <button className="btn-primary w-full">
                 Free Quote

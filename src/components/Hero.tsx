@@ -64,7 +64,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl lg:text-2xl mb-8 text-gray-200"
             >
-              Quality roof installation, repairs, and maintenance with unmatched workmanship in Riga
+              Quality roof installation, repairs, and maintenance with unmatched workmanship in Auckland
             </motion.p>
 
             <motion.div

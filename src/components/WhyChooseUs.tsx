@@ -56,26 +56,26 @@ const WhyChooseUs = () => {
     },
     {
       icon: Wrench,
-      title: 'Local Expertise',
-      description: 'Deep knowledge of Riga\'s climate and building codes for optimal roofing solutions.',
-      stats: 'Riga Specialists',
+      title: 'Local Auckland Expertise',
+      description: 'Deep knowledge of Auckland\'s climate, weather patterns, and NZ Building Code requirements for optimal roofing solutions.',
+      stats: 'Auckland Specialists',
       color: 'from-teal-500 to-teal-600'
     }
   ]
 
   const testimonials = [
     {
-      name: 'Anna Petrova',
-      location: 'Riga, Latvia',
+      name: 'Sarah Mitchell',
+      location: 'Auckland, New Zealand',
       rating: 5,
-      text: 'Exceptional work! They replaced our entire roof in just 3 days. Professional, clean, and the quality is outstanding.',
+      text: 'Exceptional work! They replaced our entire roof in just 3 days. Professional, clean, and the quality is outstanding. Perfect for Auckland weather.',
       project: 'Complete Roof Replacement'
     },
     {
-      name: 'Māris Ozols',
-      location: 'Riga, Latvia',
+      name: 'James Thompson',
+      location: 'Auckland, New Zealand',
       rating: 5,
-      text: 'Emergency repair service saved us from major water damage. Quick response and excellent workmanship.',
+      text: 'Emergency repair service saved us from major water damage during the storm. Quick response and excellent workmanship.',
       project: 'Emergency Leak Repair'
     }
   ]
@@ -245,7 +245,7 @@ const WhyChooseUs = () => {
                 className="btn-accent text-lg px-8 py-3 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
-                <span>Call +371 20 123 456</span>
+                <span>Call +64 9 123 4567</span>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}

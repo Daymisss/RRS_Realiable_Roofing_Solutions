@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://reliableroofing.lv/sitemap.xml',
+    sitemap: 'https://reliableroofing.co.nz/sitemap.xml',
   }
 }
