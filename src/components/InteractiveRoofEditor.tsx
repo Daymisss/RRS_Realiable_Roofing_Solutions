@@ -228,8 +228,8 @@ const InteractiveRoofEditor = () => {
               <h4 className="font-medium text-gray-700 text-sm mb-2">Simple Roof Sample</h4>
               <div className="text-xs text-gray-600 space-y-1">
                 <div>Triangle Roof: 1</div>
-                <div>Color: {nodes[0]?.data?.color || '#2c3e50'}</div>
-                <div>Size: {Math.round((nodes[0]?.data?.size || 1) * 100)}%</div>
+                <div>Color: {(nodes[0] as any)?.data?.color || '#2c3e50'}</div>
+                <div>Size: {Math.round(((nodes[0] as any)?.data?.size || 1) * 100)}%</div>
               </div>
             </div>
             
