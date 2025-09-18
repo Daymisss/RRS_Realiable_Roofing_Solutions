@@ -238,7 +238,7 @@ const InteractiveRoofEditor = () => {
   const handleColorChange = useCallback((nodeId: string, newColor: string) => {
     setNodes((nds) =>
       nds.map((node) =>
-        node.id === nodeId
+        node.id === nodeId && node.type === 'roofPanel'
           ? { ...node, data: { ...node.data, color: newColor } }
           : node
       )
@@ -248,7 +248,7 @@ const InteractiveRoofEditor = () => {
   const handleRoofTypeChange = useCallback((nodeId: string, newType: string) => {
     setNodes((nds) =>
       nds.map((node) =>
-        node.id === nodeId
+        node.id === nodeId && node.type === 'roofPanel'
           ? { ...node, data: { ...node.data, roofType: newType } }
           : node
       )
@@ -258,7 +258,7 @@ const InteractiveRoofEditor = () => {
   const handleZoomChange = useCallback((nodeId: string, newZoom: number) => {
     setNodes((nds) =>
       nds.map((node) =>
-        node.id === nodeId
+        node.id === nodeId && node.type === 'roofPanel'
           ? { ...node, data: { ...node.data, zoomLevel: newZoom } }
           : node
       )
@@ -266,15 +266,20 @@ const InteractiveRoofEditor = () => {
   }, [setNodes])
 
   // Update nodes with handlers
-  const nodesWithHandlers = nodes.map(node => ({
-    ...node,
-    data: {
-      ...node.data,
-      onColorChange: handleColorChange,
-      onRoofTypeChange: handleRoofTypeChange,
-      onZoomChange: handleZoomChange
+  const nodesWithHandlers = nodes.map(node => {
+    if (node.type === 'roofPanel') {
+      return {
+        ...node,
+        data: {
+          ...node.data,
+          onColorChange: handleColorChange,
+          onRoofTypeChange: handleRoofTypeChange,
+          onZoomChange: handleZoomChange
+        }
+      }
     }
-  }))
+    return node
+  })
 
   return (
     <div className="w-full h-full">
