@@ -227,7 +227,7 @@ const initialEdges = [
 ]
 
 const InteractiveRoofEditor = () => {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes)
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes as any)
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
 
   const onConnect = useCallback(
@@ -236,8 +236,8 @@ const InteractiveRoofEditor = () => {
   )
 
   const handleColorChange = useCallback((nodeId: string, newColor: string) => {
-    setNodes((nds) =>
-      nds.map((node) =>
+    setNodes((nds: any) =>
+      nds.map((node: any) =>
         node.id === nodeId && node.type === 'roofPanel'
           ? { ...node, data: { ...node.data, color: newColor } }
           : node
@@ -246,8 +246,8 @@ const InteractiveRoofEditor = () => {
   }, [setNodes])
 
   const handleRoofTypeChange = useCallback((nodeId: string, newType: string) => {
-    setNodes((nds) =>
-      nds.map((node) =>
+    setNodes((nds: any) =>
+      nds.map((node: any) =>
         node.id === nodeId && node.type === 'roofPanel'
           ? { ...node, data: { ...node.data, roofType: newType } }
           : node
@@ -256,8 +256,8 @@ const InteractiveRoofEditor = () => {
   }, [setNodes])
 
   const handleZoomChange = useCallback((nodeId: string, newZoom: number) => {
-    setNodes((nds) =>
-      nds.map((node) =>
+    setNodes((nds: any) =>
+      nds.map((node: any) =>
         node.id === nodeId && node.type === 'roofPanel'
           ? { ...node, data: { ...node.data, zoomLevel: newZoom } }
           : node
