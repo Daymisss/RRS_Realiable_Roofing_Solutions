@@ -295,7 +295,7 @@ const InteractiveRoofEditor = () => {
         <Background />
         <Controls />
         <MiniMap 
-          nodeColor={(node) => {
+          nodeColor={(node: any) => {
             if (node.type === 'roofPanel') return node.data?.color || '#2c3e50'
             if (node.type === 'roofStructure') return '#8b4513'
             return '#999'
