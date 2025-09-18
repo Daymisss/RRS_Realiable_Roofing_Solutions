@@ -143,7 +143,7 @@ const initialNodes = [
   },
 ]
 
-const initialEdges = []
+const initialEdges: any[] = []
 
 const InteractiveRoofEditor = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes as any)
