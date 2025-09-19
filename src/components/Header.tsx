@@ -32,19 +32,19 @@ const Header = () => {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       >
         <motion.div
-          className="backdrop-blur-md px-6 py-3 transition-all duration-300 shadow-2xl relative"
+          className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative"
           style={{
             background: `
-              linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(242, 232, 232, 0.8) 100%),
+              linear-gradient(180deg, rgba(242, 232, 232, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(0, 0, 0, 0.02) 1px,
-                rgba(0, 0, 0, 0.02) 2px
+                rgba(166, 213, 227, 0.1) 1px,
+                rgba(166, 213, 227, 0.1) 2px
               )
             `,
-            border: '1px solid rgba(242, 232, 232, 0.2)'
+            border: '1px solid rgba(166, 213, 227, 0.3)'
           }}
         >
         <div className="flex items-center justify-between max-w-6xl mx-auto">
@@ -138,16 +138,16 @@ const Header = () => {
           className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl"
           style={{
             background: `
-              linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(242, 232, 232, 0.8) 100%),
+              linear-gradient(180deg, rgba(242, 232, 232, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(0, 0, 0, 0.02) 1px,
-                rgba(0, 0, 0, 0.02) 2px
+                rgba(166, 213, 227, 0.1) 1px,
+                rgba(166, 213, 227, 0.1) 2px
               )
             `,
-            border: '1px solid rgba(242, 232, 232, 0.2)'
+            border: '1px solid rgba(166, 213, 227, 0.3)'
           }}
         >
           <div className="py-4 space-y-4 px-6">

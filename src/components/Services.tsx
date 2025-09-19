@@ -83,67 +83,47 @@ const Services = () => {
 
   return (
     <section id="services" className="section-padding relative overflow-hidden">
-      {/* Sophisticated Grid Background */}
-      <div className="absolute inset-0 bg-gray-50">
-        {/* Primary Grid */}
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(166, 213, 227, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(166, 213, 227, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px'
-          }}
-        />
-        
-        {/* Secondary Grid */}
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(166, 213, 227, 0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(166, 213, 227, 0.05) 1px, transparent 1px)
-            `,
-            backgroundSize: '80px 80px'
-          }}
-        />
-        
-        {/* Diagonal Grid */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(45deg, rgba(166, 213, 227, 0.1) 1px, transparent 1px),
-              linear-gradient(-45deg, rgba(166, 213, 227, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
-          }}
-        />
-        
-        {/* Floating Geometric Shapes */}
-        <div className="absolute inset-0">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-teal-500/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.5, 0.2],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 4 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </div>
+      {/* Dark Background with Teal Accents */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `
+            linear-gradient(180deg, rgba(242, 232, 232, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%),
+            repeating-linear-gradient(
+              0deg,
+              transparent,
+              transparent 1px,
+              rgba(166, 213, 227, 0.1) 1px,
+              rgba(166, 213, 227, 0.1) 2px
+            )
+          `
+        }}
+      />
+      
+      {/* Floating Teal Particles */}
+      <div className="absolute inset-0">
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-3 h-3 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              background: 'linear-gradient(135deg, rgba(166, 213, 227, 0.3) 0%, rgba(139, 196, 216, 0.2) 100%)',
+              boxShadow: '0 0 20px rgba(166, 213, 227, 0.3)'
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.6, 0.2],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
       </div>
       
       <div className="container-custom relative z-10">
@@ -194,7 +174,12 @@ const Services = () => {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover group"
+                className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover group relative overflow-hidden"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(242, 232, 232, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%)',
+                  border: '1px solid rgba(166, 213, 227, 0.3)',
+                  boxShadow: '0 8px 32px rgba(166, 213, 227, 0.2), 0 0 0 1px rgba(166, 213, 227, 0.1)'
+                }}
               >
                 <motion.div 
                   className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
@@ -251,7 +236,13 @@ const Services = () => {
                 key={service.title}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover border-l-4 border-teal-500"
+                className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover relative overflow-hidden"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(242, 232, 232, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%)',
+                  border: '1px solid rgba(166, 213, 227, 0.3)',
+                  borderLeft: '4px solid #A6D5E3',
+                  boxShadow: '0 8px 32px rgba(166, 213, 227, 0.2), 0 0 0 1px rgba(166, 213, 227, 0.1)'
+                }}
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
