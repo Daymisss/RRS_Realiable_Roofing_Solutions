@@ -35,13 +35,24 @@ const Header = () => {
           className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative rounded-2xl mx-4"
           style={{
             background: `
-              linear-gradient(180deg, rgba(242, 232, 232, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(242, 232, 232, 0.05) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
-                transparent 1px,
-                rgba(166, 213, 227, 0.005) 1px,
-                rgba(166, 213, 227, 0.005) 2px
+                transparent 2px,
+                rgba(166, 213, 227, 0.08) 2px,
+                rgba(166, 213, 227, 0.08) 3px,
+                transparent 3px,
+                transparent 4px
+              ),
+              repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(166, 213, 227, 0.05) 2px,
+                rgba(166, 213, 227, 0.05) 3px,
+                transparent 3px,
+                transparent 4px
               )
             `,
             border: '1px solid rgba(166, 213, 227, 0.02)'
@@ -140,13 +151,24 @@ const Header = () => {
           className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl rounded-2xl mx-4"
           style={{
             background: `
-              linear-gradient(180deg, rgba(242, 232, 232, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(242, 232, 232, 0.05) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
-                transparent 1px,
-                rgba(166, 213, 227, 0.005) 1px,
-                rgba(166, 213, 227, 0.005) 2px
+                transparent 2px,
+                rgba(166, 213, 227, 0.08) 2px,
+                rgba(166, 213, 227, 0.08) 3px,
+                transparent 3px,
+                transparent 4px
+              ),
+              repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(166, 213, 227, 0.05) 2px,
+                rgba(166, 213, 227, 0.05) 3px,
+                transparent 3px,
+                transparent 4px
               )
             `,
             border: '1px solid rgba(166, 213, 227, 0.02)'
