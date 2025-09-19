@@ -26,33 +26,6 @@ const Services = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [direction, setDirection] = useState(0)
 
-  const coreServices = [
-    {
-      icon: Home,
-      title: 'Residential Roofing',
-      description: 'Complete roof installation and replacement for Auckland homes using premium Colorsteel and other NZ-approved materials.',
-      features: ['New roof installation', 'Roof replacement', 'Colorsteel roofing', 'NZ Building Code compliance']
-    },
-    {
-      icon: Wrench,
-      title: 'Roof Repairs',
-      description: 'Fast and reliable repair services to fix leaks, storm damage, and other roofing issues common in Auckland weather.',
-      features: ['Leak repairs', 'Storm damage', 'Emergency service', 'Weatherproofing']
-    },
-    {
-      icon: Building,
-      title: 'Commercial Roofing',
-      description: 'Professional roofing solutions for Auckland businesses, warehouses, and commercial properties.',
-      features: ['Flat roof systems', 'Industrial roofing', 'Maintenance plans', 'Commercial warranties']
-    },
-    {
-      icon: Droplets,
-      title: 'Gutters & Downpipes',
-      description: 'Complete gutter installation, repair, and maintenance to handle Auckland\'s heavy rainfall and protect your property.',
-      features: ['Gutter installation', 'Downpipe repair', 'Leaf protection', 'Stormwater management']
-    }
-  ]
-
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return
@@ -79,6 +52,33 @@ const Services = () => {
     setDirection(index > currentSlide ? 1 : -1)
     setCurrentSlide(index)
   }
+
+  const coreServices = [
+    {
+      icon: Home,
+      title: 'Residential Roofing',
+      description: 'Complete roof installation and replacement for Auckland homes using premium Colorsteel and other NZ-approved materials.',
+      features: ['New roof installation', 'Roof replacement', 'Colorsteel roofing', 'NZ Building Code compliance']
+    },
+    {
+      icon: Wrench,
+      title: 'Roof Repairs',
+      description: 'Fast and reliable repair services to fix leaks, storm damage, and other roofing issues common in Auckland weather.',
+      features: ['Leak repairs', 'Storm damage', 'Emergency service', 'Weatherproofing']
+    },
+    {
+      icon: Building,
+      title: 'Commercial Roofing',
+      description: 'Professional roofing solutions for Auckland businesses, warehouses, and commercial properties.',
+      features: ['Flat roof systems', 'Industrial roofing', 'Maintenance plans', 'Commercial warranties']
+    },
+    {
+      icon: Droplets,
+      title: 'Gutters & Downpipes',
+      description: 'Complete gutter installation, repair, and maintenance to handle Auckland\'s heavy rainfall and protect your property.',
+      features: ['Gutter installation', 'Downpipe repair', 'Leaf protection', 'Stormwater management']
+    }
+  ]
 
   const specialtyServices = [
     {
