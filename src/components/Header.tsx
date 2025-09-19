@@ -35,16 +35,16 @@ const Header = () => {
           className="backdrop-blur-md rounded-2xl px-6 py-3 transition-all duration-300 shadow-2xl relative"
           style={{
             background: `
-              linear-gradient(180deg, rgba(45, 25, 65, 0.95) 0%, rgba(25, 15, 35, 0.98) 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(242, 232, 232, 0.98) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(255, 255, 255, 0.03) 1px,
-                rgba(255, 255, 255, 0.03) 2px
+                rgba(0, 0, 0, 0.03) 1px,
+                rgba(0, 0, 0, 0.03) 2px
               )
             `,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid rgba(242, 232, 232, 0.3)'
           }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
@@ -83,14 +83,14 @@ const Header = () => {
             
             {/* RRS Text */}
             <div className="flex items-center space-x-2">
-              <h1 className="text-2xl font-bold text-white">RRS</h1>
-              <div className="h-6 w-px bg-white/30"></div>
+              <h1 className="text-2xl font-bold text-black">RRS</h1>
+              <div className="h-6 w-px bg-black/30"></div>
             </div>
             
             {/* Company Name */}
             <div>
-              <h2 className="text-lg font-semibold text-white">Reliable Roofing</h2>
-              <p className="text-sm text-white/80">Solutions</p>
+              <h2 className="text-lg font-semibold text-black">Reliable Roofing</h2>
+              <p className="text-sm text-black/80">Solutions</p>
             </div>
           </motion.div>
 
@@ -101,7 +101,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.05 }}
-                className="text-white hover:text-teal-400 font-medium transition-colors duration-200"
+                className="text-black hover:text-teal-500 font-medium transition-colors duration-200"
               >
                 {item.name}
               </motion.a>
@@ -110,7 +110,7 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-white/80">
+            <div className="flex items-center space-x-2 text-sm text-black/80">
               <Phone className="w-4 h-4" />
               <span>+64 9 123 4567</span>
             </div>
@@ -128,7 +128,7 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
           >
-            {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+            {isMenuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
           </button>
         </div>
 
@@ -140,21 +140,21 @@ const Header = () => {
           className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 rounded-2xl backdrop-blur-md shadow-2xl"
           style={{
             background: `
-              linear-gradient(180deg, rgba(45, 25, 65, 0.95) 0%, rgba(25, 15, 35, 0.98) 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(242, 232, 232, 0.98) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(255, 255, 255, 0.03) 1px,
-                rgba(255, 255, 255, 0.03) 2px
+                rgba(0, 0, 0, 0.03) 1px,
+                rgba(0, 0, 0, 0.03) 2px
               )
             `,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid rgba(242, 232, 232, 0.3)'
           }}
         >
           <div className="py-4 space-y-4 px-6">
             {/* Mobile Logo */}
-            <div className="flex items-center space-x-3 pb-4 border-b border-white/20">
+            <div className="flex items-center space-x-3 pb-4 border-b border-black/20">
               <div className="flex items-center justify-center">
                 <svg 
                   width="20" 
@@ -180,8 +180,8 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white">RRS</h3>
-                <p className="text-xs text-white/80">Reliable Roofing Solutions</p>
+                <h3 className="text-lg font-bold text-black">RRS</h3>
+                <p className="text-xs text-black/80">Reliable Roofing Solutions</p>
               </div>
             </div>
             
@@ -190,13 +190,13 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-white hover:text-teal-400 font-medium transition-colors duration-200"
+                className="block text-black hover:text-teal-500 font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>
             ))}
             <div className="pt-4 space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-white/80">
+              <div className="flex items-center space-x-2 text-sm text-black/80">
                 <Phone className="w-4 h-4" />
                 <span>+64 9 123 4567</span>
               </div>
