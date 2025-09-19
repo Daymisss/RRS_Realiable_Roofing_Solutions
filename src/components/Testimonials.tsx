@@ -145,12 +145,16 @@ const Testimonials = () => {
             <motion.div
               key={stat.label}
               variants={itemVariants}
-              className="text-center"
+              className="text-center rounded-2xl p-4 relative overflow-hidden"
+              style={{
+                background: `linear-gradient(135deg, rgba(255, 120, 172, 0.9) 0%, rgba(255, 120, 172, 0.3) 100%)`,
+                boxShadow: '0 8px 32px rgba(255, 120, 172, 0.3)'
+              }}
             >
-              <div className="text-4xl font-bold text-teal-600 mb-2">
+              <div className="text-4xl font-bold text-white mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 font-medium">
+              <div className="text-white/90 font-medium">
                 {stat.label}
               </div>
             </motion.div>

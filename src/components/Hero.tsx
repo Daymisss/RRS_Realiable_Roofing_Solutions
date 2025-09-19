@@ -309,7 +309,11 @@ const Hero = () => {
                     y: -5,
                     transition: { duration: 0.2 }
                   }}
-                  className="text-center group cursor-pointer"
+                  className="text-center group cursor-pointer rounded-2xl p-4 relative overflow-hidden"
+                  style={{
+                    background: `linear-gradient(135deg, rgba(255, 120, 172, 0.9) 0%, rgba(255, 120, 172, 0.3) 100%)`,
+                    boxShadow: '0 8px 32px rgba(255, 120, 172, 0.3)'
+                  }}
                 >
                   <motion.div
                     whileHover={{ 
@@ -317,18 +321,18 @@ const Hero = () => {
                       scale: 1.1
                     }}
                     transition={{ duration: 0.5 }}
-                    className="w-8 h-8 mx-auto mb-2 teal-primary group-hover:text-teal-500"
+                    className="w-8 h-8 mx-auto mb-2 text-white"
                   >
                     <item.icon className="w-full h-full" />
                   </motion.div>
                   <motion.div 
-                    className="text-2xl font-bold group-hover:text-teal-500"
+                    className="text-2xl font-bold text-white"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                   >
                     {item.number}
                   </motion.div>
-                  <div className="text-sm text-black group-hover:text-gray-800">
+                  <div className="text-sm text-white/90">
                     {item.text}
                   </div>
                 </motion.div>

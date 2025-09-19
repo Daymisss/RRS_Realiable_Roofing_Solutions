@@ -161,7 +161,11 @@ const WhyChooseUs = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 mb-16"
+          className="rounded-2xl p-8 mb-16"
+          style={{
+            background: `linear-gradient(135deg, rgba(255, 120, 172, 0.9) 0%, rgba(255, 120, 172, 0.3) 100%)`,
+            boxShadow: '0 8px 32px rgba(255, 120, 172, 0.3)'
+          }}
         >
           <div className="grid md:grid-cols-4 gap-8 text-center text-white">
             <motion.div variants={itemVariants}>
