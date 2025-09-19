@@ -29,25 +29,23 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       >
         <motion.div
-          className="backdrop-blur-md rounded-2xl px-6 py-3 transition-all duration-300 shadow-2xl relative"
+          className="backdrop-blur-md px-6 py-3 transition-all duration-300 shadow-2xl relative"
           style={{
             background: `
-              linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(242, 232, 232, 0.98) 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(242, 232, 232, 0.8) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(0, 0, 0, 0.03) 1px,
-                rgba(0, 0, 0, 0.03) 2px
+                rgba(0, 0, 0, 0.02) 1px,
+                rgba(0, 0, 0, 0.02) 2px
               )
             `,
-            border: '1px solid rgba(242, 232, 232, 0.3)'
+            border: '1px solid rgba(242, 232, 232, 0.2)'
           }}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.2 }}
         >
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           {/* Logo */}
@@ -137,19 +135,19 @@ const Header = () => {
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 rounded-2xl backdrop-blur-md shadow-2xl"
+          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl"
           style={{
             background: `
-              linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(242, 232, 232, 0.98) 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(242, 232, 232, 0.8) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(0, 0, 0, 0.03) 1px,
-                rgba(0, 0, 0, 0.03) 2px
+                rgba(0, 0, 0, 0.02) 1px,
+                rgba(0, 0, 0, 0.02) 2px
               )
             `,
-            border: '1px solid rgba(242, 232, 232, 0.3)'
+            border: '1px solid rgba(242, 232, 232, 0.2)'
           }}
         >
           <div className="py-4 space-y-4 px-6">
