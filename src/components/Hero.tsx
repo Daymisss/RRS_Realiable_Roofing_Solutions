@@ -44,6 +44,13 @@ const Hero = () => {
 
   return (
     <section ref={heroRef} id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Cream Gradient Background */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(180deg, #ffffff 0%, #F2E8E8 100%)'
+        }}
+      />
       {/* Animated Background */}
       <motion.div 
         className="absolute inset-0" 
@@ -136,7 +143,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div 
-        className="container-custom relative z-10"
+        className="relative z-10 max-w-6xl mx-auto px-6"
         style={{ y, opacity, scale }}
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">

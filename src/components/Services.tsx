@@ -82,8 +82,71 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="section-padding bg-gray-50">
-      <div className="container-custom">
+    <section id="services" className="section-padding relative overflow-hidden">
+      {/* Sophisticated Grid Background */}
+      <div className="absolute inset-0 bg-gray-50">
+        {/* Primary Grid */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(166, 213, 227, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(166, 213, 227, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px'
+          }}
+        />
+        
+        {/* Secondary Grid */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(166, 213, 227, 0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(166, 213, 227, 0.05) 1px, transparent 1px)
+            `,
+            backgroundSize: '80px 80px'
+          }}
+        />
+        
+        {/* Diagonal Grid */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `
+              linear-gradient(45deg, rgba(166, 213, 227, 0.1) 1px, transparent 1px),
+              linear-gradient(-45deg, rgba(166, 213, 227, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
+        />
+        
+        {/* Floating Geometric Shapes */}
+        <div className="absolute inset-0">
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-teal-500/20 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0.2, 0.5, 0.2],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <motion.div
           ref={ref}
           initial="hidden"
