@@ -160,7 +160,7 @@ const ProjectGallery = () => {
             variants={itemVariants}
             className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            Our <span className="text-gradient">Project Gallery</span>
+            Our <span className="text-black">Project Gallery</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}

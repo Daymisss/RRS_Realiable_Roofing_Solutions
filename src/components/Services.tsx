@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
@@ -202,7 +203,7 @@ const Services = () => {
             variants={itemVariants}
             className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            Our <span className="text-gradient">Services</span>
+            Our <span className="text-black">Services</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
@@ -261,7 +262,7 @@ const Services = () => {
                         transition={{ duration: 0.6 }}
                       >
                         <div className="w-24 h-24 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
-                          <coreServices[currentSlide].icon className="w-12 h-12 text-white" />
+                          {React.createElement(coreServices[currentSlide].icon, { className: "w-12 h-12 text-white" })}
                         </div>
                       </motion.div>
                       

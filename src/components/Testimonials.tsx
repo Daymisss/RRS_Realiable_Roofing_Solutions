@@ -139,7 +139,7 @@ const Testimonials = () => {
             variants={itemVariants}
             className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            Customer <span className="text-gradient">Testimonials</span>
+            Customer <span className="text-black">Testimonials</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}

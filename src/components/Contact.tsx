@@ -154,7 +154,7 @@ const Contact = () => {
             variants={itemVariants}
             className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            Get Your <span className="text-gradient">Free Quote</span>
+            Get Your <span className="text-black">Free Quote</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}

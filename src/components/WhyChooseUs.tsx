@@ -131,7 +131,7 @@ const WhyChooseUs = () => {
             variants={itemVariants}
             className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            Why Choose <span className="text-gradient">Reliable Roofing?</span>
+            Why Choose <span className="text-black">Reliable Roofing?</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
