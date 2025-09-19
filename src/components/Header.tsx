@@ -49,7 +49,7 @@ const Header = () => {
                 height="24" 
                 viewBox="0 0 24 24" 
                 fill="none" 
-                className="text-primary-600"
+                className="teal-primary"
               >
                 <path 
                   d="M12 2L2 8L12 14L22 8L12 2Z" 
@@ -88,7 +88,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.05 }}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </motion.a>
@@ -135,7 +135,7 @@ const Header = () => {
                   height="20" 
                   viewBox="0 0 24 24" 
                   fill="none" 
-                  className="text-primary-600"
+                  className="teal-primary"
                 >
                   <path 
                     d="M12 2L2 8L12 14L22 8L12 2Z" 
@@ -164,7 +164,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="block text-gray-700 hover:text-teal-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>

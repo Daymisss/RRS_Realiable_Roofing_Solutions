@@ -125,12 +125,24 @@ const Services = () => {
               <motion.div
                 key={service.title}
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center mb-4">
+                <motion.div 
+                  className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                  whileHover={{ 
+                    rotate: [0, -5, 5, 0],
+                    scale: 1.1
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
                   <service.icon className="w-8 h-8 text-white" />
-                </div>
+                </motion.div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">
                   {service.title}
                 </h4>
@@ -148,7 +160,7 @@ const Services = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-4 text-primary-600 font-semibold flex items-center group"
+                  className="mt-4 text-teal-600 font-semibold flex items-center group"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -176,10 +188,10 @@ const Services = () => {
                 key={service.title}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover border-l-4 border-accent-500"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover border-l-4 border-teal-500"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -211,7 +223,7 @@ const Services = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Need a Roofing Expert?
             </h3>
@@ -221,7 +233,7 @@ const Services = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="bg-white text-teal-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Get Free Quote
             </motion.button>

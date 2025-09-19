@@ -166,7 +166,12 @@ const ProjectGallery = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              whileHover={{ y: -5 }}
+              whileHover={{ 
+                y: -10,
+                scale: 1.02,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
+              }}
+              whileTap={{ scale: 0.98 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
               onClick={() => {
                 setSelectedProject(index)
@@ -182,7 +187,7 @@ const ProjectGallery = () => {
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ZoomIn className="w-8 h-8 text-white" />
                 </div>
-                <div className="absolute top-4 right-4 bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 right-4 bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {project.type}
                 </div>
               </div>
@@ -203,7 +208,7 @@ const ProjectGallery = () => {
                   {project.features.slice(0, 2).map((feature, featureIndex) => (
                     <span
                       key={featureIndex}
-                      className="bg-primary-100 text-primary-700 px-2 py-1 rounded text-xs"
+                      className="bg-teal-100 text-teal-700 px-2 py-1 rounded text-xs"
                     >
                       {feature}
                     </span>
@@ -290,7 +295,7 @@ const ProjectGallery = () => {
                           <ul className="space-y-2">
                             {projects[selectedProject].features.map((feature, index) => (
                               <li key={index} className="flex items-center text-gray-600">
-                                <div className="w-2 h-2 bg-primary-500 rounded-full mr-3"></div>
+                                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
                                 {feature}
                               </li>
                             ))}

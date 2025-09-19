@@ -155,6 +155,10 @@ const Contact = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={itemVariants}
+            whileHover={{ 
+              y: -5,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+            }}
             className="bg-white rounded-2xl p-8 shadow-lg"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -169,14 +173,15 @@ const Contact = () => {
                   </label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
+                    <motion.input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                      whileFocus={{ scale: 1.02 }}
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
@@ -195,7 +200,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -215,7 +220,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                       placeholder="+64 9 123 4567"
                     />
                   </div>
@@ -230,7 +235,7 @@ const Contact = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
@@ -254,7 +259,7 @@ const Contact = () => {
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                     placeholder="Your property address"
                   />
                 </div>
@@ -272,7 +277,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-none"
                     placeholder="Tell us about your roofing project, timeline, and any specific requirements..."
                   />
                 </div>
@@ -349,7 +354,7 @@ const Contact = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>

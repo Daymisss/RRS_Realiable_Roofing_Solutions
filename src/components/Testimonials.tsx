@@ -147,7 +147,7 @@ const Testimonials = () => {
               variants={itemVariants}
               className="text-center"
             >
-              <div className="text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-4xl font-bold text-teal-600 mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-600 font-medium">
@@ -164,16 +164,20 @@ const Testimonials = () => {
           variants={containerVariants}
           className="relative"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 md:p-12 text-white">
+          <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 md:p-12 text-white">
             <div className="max-w-4xl mx-auto">
               <Quote className="w-12 h-12 text-white/30 mb-6" />
               
               <motion.div
                 key={currentTestimonial}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -50, scale: 0.9 }}
+                transition={{ 
+                  duration: 0.6,
+                  type: "spring",
+                  stiffness: 100
+                }}
                 className="mb-8"
               >
                 <p className="text-xl md:text-2xl leading-relaxed mb-6 italic">
@@ -181,33 +185,67 @@ const Testimonials = () => {
                 </p>
                 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <img
+                  <motion.div 
+                  className="flex items-center space-x-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <motion.img
                       src={testimonials[currentTestimonial].image}
                       alt={testimonials[currentTestimonial].name}
                       className="w-16 h-16 rounded-full object-cover"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
                     />
                     <div>
-                      <div className="font-semibold text-lg">
+                      <motion.div 
+                        className="font-semibold text-lg"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                      >
                         {testimonials[currentTestimonial].name}
-                      </div>
-                      <div className="text-white/80">
+                      </motion.div>
+                      <motion.div 
+                        className="text-white/80"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                      >
                         {testimonials[currentTestimonial].location}
-                      </div>
-                      <div className="flex items-center space-x-2 mt-1">
+                      </motion.div>
+                      <motion.div 
+                        className="flex items-center space-x-2 mt-1"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                      >
                         <Calendar className="w-4 h-4" />
                         <span className="text-sm text-white/70">
                           {testimonials[currentTestimonial].date}
                         </span>
-                      </div>
+                      </motion.div>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-center space-x-1">
+                  <motion.div 
+                    className="flex items-center space-x-1"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                  >
                     {Array.from({ length: testimonials[currentTestimonial].rating }).map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: 0.7 + i * 0.1 }}
+                      >
+                        <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                      </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
 

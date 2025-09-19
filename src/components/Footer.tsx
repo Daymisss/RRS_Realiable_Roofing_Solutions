@@ -70,7 +70,7 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">R</span>
               </div>
               <div>
@@ -87,21 +87,21 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-400" />
+                <Phone className="w-5 h-5 text-teal-400" />
                 <div>
                   <div className="font-semibold">+64 9 123 4567</div>
                   <div className="text-sm text-gray-400">24/7 Emergency Service</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary-400" />
+                <Mail className="w-5 h-5 text-teal-400" />
                 <div>
                   <div className="font-semibold">info@reliableroofing.co.nz</div>
                   <div className="text-sm text-gray-400">General Inquiries</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary-400" />
+                <MapPin className="w-5 h-5 text-teal-400" />
                 <div>
                   <div className="font-semibold">Auckland, New Zealand</div>
                   <div className="text-sm text-gray-400">Serving Greater Auckland Area</div>
@@ -122,7 +122,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -143,7 +143,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -164,7 +164,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -174,7 +174,7 @@ const Footer = () => {
 
             {/* Certifications */}
             <div>
-              <h5 className="font-semibold mb-4 text-primary-400">Our Certifications</h5>
+              <h5 className="font-semibold mb-4 text-teal-400">Our Certifications</h5>
               <div className="grid grid-cols-2 gap-2">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center space-x-2 text-sm">
@@ -196,14 +196,14 @@ const Footer = () => {
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex items-center justify-center space-x-3">
-              <Shield className="w-8 h-8 text-primary-400" />
+              <Shield className="w-8 h-8 text-teal-400" />
               <div>
                 <div className="font-semibold">Fully Licensed</div>
                 <div className="text-sm text-gray-400">& Insured</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-3">
-              <Award className="w-8 h-8 text-accent-400" />
+              <Award className="w-8 h-8 text-teal-400" />
               <div>
                 <div className="font-semibold">20+ Years</div>
                 <div className="text-sm text-gray-400">Experience</div>
@@ -242,7 +242,7 @@ const Footer = () => {
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors duration-200"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -261,12 +261,12 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 py-2 bg-primary-600 hover:bg-primary-700 rounded-r-lg transition-colors duration-200"
+                  className="px-6 py-2 bg-teal-600 hover:bg-teal-700 rounded-r-lg transition-colors duration-200"
                 >
                   Subscribe
                 </motion.button>
@@ -301,7 +301,7 @@ const Footer = () => {
               onClick={scrollToTop}
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-700 transition-colors duration-200"
+              className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center hover:bg-teal-700 transition-colors duration-200"
               aria-label="Back to top"
             >
               <ArrowUp className="w-5 h-5" />
