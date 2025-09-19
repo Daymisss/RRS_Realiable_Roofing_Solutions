@@ -35,9 +35,14 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731548-c6a0c3f2fcc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/60 to-transparent"></div>
+      <div className="absolute inset-0" style={{ backgroundColor: '#F2F0EA' }}>
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px)
+          `,
+          backgroundSize: '20px 20px'
+        }}></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -47,13 +52,13 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white"
+            className="text-gray-900"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl lg:text-6xl font-bold mb-6 text-shadow-lg"
+              className="text-5xl lg:text-6xl font-bold mb-6"
             >
               Reliable Roofing
               <span className="block text-accent-400">Solutions</span>
@@ -63,7 +68,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl lg:text-2xl mb-8 text-gray-200"
+              className="text-xl lg:text-2xl mb-8 text-gray-700"
             >
               Quality roof installation, repairs, and maintenance with unmatched workmanship in Auckland
             </motion.p>
@@ -101,17 +106,17 @@ const Hero = () => {
               <div className="text-center">
                 <Shield className="w-8 h-8 mx-auto mb-2 text-accent-400" />
                 <div className="text-2xl font-bold">20+</div>
-                <div className="text-sm text-gray-300">Years Experience</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
                 <Award className="w-8 h-8 mx-auto mb-2 text-accent-400" />
                 <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm text-gray-300">Projects Completed</div>
+                <div className="text-sm text-gray-600">Projects Completed</div>
               </div>
               <div className="text-center">
                 <Clock className="w-8 h-8 mx-auto mb-2 text-accent-400" />
                 <div className="text-2xl font-bold">24/7</div>
-                <div className="text-sm text-gray-300">Emergency Service</div>
+                <div className="text-sm text-gray-600">Emergency Service</div>
               </div>
             </motion.div>
           </motion.div>
@@ -140,12 +145,12 @@ const Hero = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-white rounded-full mt-2"
+            className="w-1 h-3 bg-gray-600 rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
