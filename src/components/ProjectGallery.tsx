@@ -137,7 +137,14 @@ const ProjectGallery = () => {
         className="absolute inset-0 dynamic-grid"
         style={{
           background: `
-            linear-gradient(135deg, rgba(168, 213, 227, 0.2) 0%, rgba(242, 240, 234, 0.3) 50%, rgba(168, 213, 227, 0.15) 100%)
+            linear-gradient(135deg, rgba(168, 213, 227, 0.2) 0%, rgba(242, 240, 234, 0.3) 50%, rgba(168, 213, 227, 0.15) 100%),
+            repeating-linear-gradient(
+              60deg,
+              transparent,
+              transparent 12px,
+              rgba(168, 213, 227, 0.04) 12px,
+              rgba(168, 213, 227, 0.04) 13px
+            )
           `
         }}
       />
