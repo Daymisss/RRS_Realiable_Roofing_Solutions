@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import { ArrowRight, Shield, Award, Clock } from 'lucide-react'
-import InteractiveRoofEditor from './InteractiveRoofEditor'
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -364,7 +363,18 @@ const Hero = () => {
               }}
               transition={{ duration: 0.3 }}
             >
-              <InteractiveRoofEditor />
+              <div className="relative w-full h-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1581578731548-c6a0c3f2f6f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Professional roofing installation"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold mb-2">Professional Roofing</h3>
+                  <p className="text-sm opacity-90">Quality installation & repair services</p>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
