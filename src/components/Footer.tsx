@@ -64,14 +64,7 @@ const Footer = () => {
         className="absolute inset-0 dynamic-grid"
         style={{
           background: `
-            linear-gradient(135deg, rgba(168, 213, 227, 0.3) 0%, rgba(242, 240, 234, 0.5) 50%, rgba(168, 213, 227, 0.2) 100%),
-            repeating-linear-gradient(
-              120deg,
-              transparent,
-              transparent 22px,
-              rgba(168, 213, 227, 0.08) 22px,
-              rgba(168, 213, 227, 0.08) 23px
-            )
+            linear-gradient(135deg, rgba(168, 213, 227, 0.3) 0%, rgba(242, 240, 234, 0.5) 50%, rgba(168, 213, 227, 0.2) 100%)
           `
         }}
       />

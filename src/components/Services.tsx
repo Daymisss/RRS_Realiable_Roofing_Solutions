@@ -85,17 +85,10 @@ const Services = () => {
     <section id="services" className="section-padding relative overflow-hidden">
       {/* Teal/Cream Background with Dynamic Grid */}
       <div
-        className="absolute inset-0 dynamic-grid"
+        className="absolute inset-0 dynamic-grid-services"
         style={{
           background: `
-            linear-gradient(135deg, rgba(242, 240, 234, 0.4) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%),
-            repeating-linear-gradient(
-              30deg,
-              transparent,
-              transparent 15px,
-              rgba(168, 213, 227, 0.05) 15px,
-              rgba(168, 213, 227, 0.05) 16px
-            )
+            linear-gradient(135deg, rgba(242, 240, 234, 0.4) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%)
           `
         }}
       />

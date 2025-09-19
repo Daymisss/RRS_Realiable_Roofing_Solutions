@@ -131,14 +131,7 @@ const Contact = () => {
         className="absolute inset-0 dynamic-grid"
         style={{
           background: `
-            linear-gradient(135deg, rgba(242, 240, 234, 0.45) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%),
-            repeating-linear-gradient(
-              90deg,
-              transparent,
-              transparent 14px,
-              rgba(168, 213, 227, 0.04) 14px,
-              rgba(168, 213, 227, 0.04) 15px
-            )
+            linear-gradient(135deg, rgba(242, 240, 234, 0.45) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%)
           `
         }}
       />

@@ -108,14 +108,7 @@ const WhyChooseUs = () => {
         className="absolute inset-0 dynamic-grid"
         style={{
           background: `
-            linear-gradient(135deg, rgba(168, 213, 227, 0.18) 0%, rgba(242, 240, 234, 0.4) 50%, rgba(168, 213, 227, 0.12) 100%),
-            repeating-linear-gradient(
-              45deg,
-              transparent,
-              transparent 16px,
-              rgba(168, 213, 227, 0.05) 16px,
-              rgba(168, 213, 227, 0.05) 17px
-            )
+            linear-gradient(135deg, rgba(168, 213, 227, 0.18) 0%, rgba(242, 240, 234, 0.4) 50%, rgba(168, 213, 227, 0.12) 100%)
           `
         }}
       />

@@ -113,16 +113,79 @@
       repeating-linear-gradient(
         0deg,
         transparent,
-        transparent 2px,
-        rgba(168, 213, 227, 0.1) 2px,
-        rgba(168, 213, 227, 0.1) 3px
+        transparent 40px,
+        rgba(168, 213, 227, 0.15) 40px,
+        rgba(168, 213, 227, 0.15) 42px,
+        transparent 42px,
+        transparent 80px
       ),
       repeating-linear-gradient(
         90deg,
         transparent,
-        transparent 2px,
-        rgba(168, 213, 227, 0.05) 2px,
-        rgba(168, 213, 227, 0.05) 3px
+        transparent 40px,
+        rgba(168, 213, 227, 0.1) 40px,
+        rgba(168, 213, 227, 0.1) 42px,
+        transparent 42px,
+        transparent 80px
       );
+    background-size: 80px 80px;
+    animation: gridMove 20s linear infinite;
+  }
+
+  @keyframes gridMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 80px 80px;
+    }
+  }
+
+  .dynamic-grid-hero {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        rgba(168, 213, 227, 0.12) 50px,
+        rgba(168, 213, 227, 0.12) 52px,
+        transparent 52px,
+        transparent 100px
+      );
+    background-size: 100px 100px;
+    animation: gridMoveDiagonal 25s linear infinite;
+  }
+
+  @keyframes gridMoveDiagonal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100px 100px;
+    }
+  }
+
+  .dynamic-grid-services {
+    background-image: 
+      repeating-linear-gradient(
+        30deg,
+        transparent,
+        transparent 35px,
+        rgba(168, 213, 227, 0.08) 35px,
+        rgba(168, 213, 227, 0.08) 37px,
+        transparent 37px,
+        transparent 70px
+      );
+    background-size: 70px 70px;
+    animation: gridMoveServices 18s linear infinite;
+  }
+
+  @keyframes gridMoveServices {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 70px 70px;
+    }
   }
 }
