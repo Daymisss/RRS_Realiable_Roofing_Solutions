@@ -29,10 +29,10 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       >
         <motion.div
-          className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative rounded-2xl"
+          className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative"
           style={{
             background: `
               linear-gradient(180deg, rgba(242, 232, 232, 0.1) 0%, rgba(255, 255, 255, 0.08) 100%),
@@ -137,7 +137,7 @@ const Header = () => {
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl rounded-2xl"
+          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl"
           style={{
             background: `
               linear-gradient(180deg, rgba(242, 232, 232, 0.1) 0%, rgba(255, 255, 255, 0.08) 100%),
