@@ -35,16 +35,16 @@ const Header = () => {
           className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative rounded-2xl"
           style={{
             background: `
-              linear-gradient(180deg, rgba(242, 232, 232, 0.4) 0%, rgba(255, 255, 255, 0.3) 100%),
+              linear-gradient(180deg, rgba(242, 232, 232, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(166, 213, 227, 0.03) 1px,
-                rgba(166, 213, 227, 0.03) 2px
+                rgba(166, 213, 227, 0.02) 1px,
+                rgba(166, 213, 227, 0.02) 2px
               )
             `,
-            border: '1px solid rgba(166, 213, 227, 0.2)'
+            border: '1px solid rgba(166, 213, 227, 0.1)'
           }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
@@ -140,16 +140,16 @@ const Header = () => {
           className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl rounded-2xl"
           style={{
             background: `
-              linear-gradient(180deg, rgba(242, 232, 232, 0.4) 0%, rgba(255, 255, 255, 0.3) 100%),
+              linear-gradient(180deg, rgba(242, 232, 232, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%),
               repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 1px,
-                rgba(166, 213, 227, 0.03) 1px,
-                rgba(166, 213, 227, 0.03) 2px
+                rgba(166, 213, 227, 0.02) 1px,
+                rgba(166, 213, 227, 0.02) 2px
               )
             `,
-            border: '1px solid rgba(166, 213, 227, 0.2)'
+            border: '1px solid rgba(166, 213, 227, 0.1)'
           }}
         >
           <div className="py-4 space-y-4 px-6">
