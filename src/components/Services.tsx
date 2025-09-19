@@ -26,33 +26,6 @@ const Services = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [direction, setDirection] = useState(0)
 
-  // Auto-play functionality
-  useEffect(() => {
-    if (!isAutoPlaying) return
-    
-    const interval = setInterval(() => {
-      setDirection(1)
-      setCurrentSlide((prev) => (prev + 1) % coreServices.length)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [isAutoPlaying, coreServices.length])
-
-  const nextSlide = () => {
-    setDirection(1)
-    setCurrentSlide((prev) => (prev + 1) % coreServices.length)
-  }
-
-  const prevSlide = () => {
-    setDirection(-1)
-    setCurrentSlide((prev) => (prev - 1 + coreServices.length) % coreServices.length)
-  }
-
-  const goToSlide = (index: number) => {
-    setDirection(index > currentSlide ? 1 : -1)
-    setCurrentSlide(index)
-  }
-
   const coreServices = [
     {
       icon: Home,
@@ -79,6 +52,33 @@ const Services = () => {
       features: ['Gutter installation', 'Downpipe repair', 'Leaf protection', 'Stormwater management']
     }
   ]
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!isAutoPlaying) return
+    
+    const interval = setInterval(() => {
+      setDirection(1)
+      setCurrentSlide((prev) => (prev + 1) % coreServices.length)
+    }, 4000)
+
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, coreServices.length])
+
+  const nextSlide = () => {
+    setDirection(1)
+    setCurrentSlide((prev) => (prev + 1) % coreServices.length)
+  }
+
+  const prevSlide = () => {
+    setDirection(-1)
+    setCurrentSlide((prev) => (prev - 1 + coreServices.length) % coreServices.length)
+  }
+
+  const goToSlide = (index: number) => {
+    setDirection(index > currentSlide ? 1 : -1)
+    setCurrentSlide(index)
+  }
 
   const specialtyServices = [
     {
