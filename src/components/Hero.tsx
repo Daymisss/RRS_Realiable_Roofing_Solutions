@@ -45,17 +45,10 @@ const Hero = () => {
     <section ref={heroRef} id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Cream Gradient Background */}
       <div
-        className="absolute inset-0 dynamic-grid"
+        className="absolute inset-0 floaty-grid-hero"
         style={{
           background: `
-            linear-gradient(135deg, rgba(168, 213, 227, 0.15) 0%, rgba(242, 240, 234, 0.25) 50%, rgba(168, 213, 227, 0.1) 100%),
-            repeating-linear-gradient(
-              45deg,
-              transparent,
-              transparent 20px,
-              rgba(168, 213, 227, 0.03) 20px,
-              rgba(168, 213, 227, 0.03) 21px
-            )
+            linear-gradient(135deg, rgba(168, 213, 227, 0.15) 0%, rgba(242, 240, 234, 0.25) 50%, rgba(168, 213, 227, 0.1) 100%)
           `
         }}
       />

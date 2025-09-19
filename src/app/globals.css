@@ -110,19 +110,91 @@
 
   .dynamic-grid {
     background-image: 
+      radial-gradient(circle at 20% 20%, rgba(168, 213, 227, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, rgba(168, 213, 227, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 40% 60%, rgba(168, 213, 227, 0.06) 1px, transparent 1px),
+      radial-gradient(circle at 60% 40%, rgba(168, 213, 227, 0.07) 1px, transparent 1px),
       repeating-linear-gradient(
         0deg,
         transparent,
-        transparent 2px,
-        rgba(168, 213, 227, 0.1) 2px,
-        rgba(168, 213, 227, 0.1) 3px
+        transparent 15px,
+        rgba(168, 213, 227, 0.03) 15px,
+        rgba(168, 213, 227, 0.03) 16px,
+        transparent 16px,
+        transparent 30px
       ),
       repeating-linear-gradient(
         90deg,
         transparent,
-        transparent 2px,
-        rgba(168, 213, 227, 0.05) 2px,
-        rgba(168, 213, 227, 0.05) 3px
+        transparent 20px,
+        rgba(168, 213, 227, 0.02) 20px,
+        rgba(168, 213, 227, 0.02) 21px,
+        transparent 21px,
+        transparent 40px
       );
+    background-size: 60px 60px, 80px 80px, 100px 100px, 70px 70px, 30px 30px, 40px 40px;
+    animation: floatyGrid 15s ease-in-out infinite;
+  }
+
+  @keyframes floatyGrid {
+    0%, 100% {
+      background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+      transform: translateY(0px);
+    }
+    25% {
+      background-position: 10px 5px, -5px 10px, 15px -5px, -10px 15px, 5px 5px, -5px 5px;
+      transform: translateY(-2px);
+    }
+    50% {
+      background-position: 20px 10px, -10px 20px, 30px -10px, -20px 30px, 10px 10px, -10px 10px;
+      transform: translateY(0px);
+    }
+    75% {
+      background-position: 15px 8px, -8px 15px, 25px -8px, -15px 25px, 8px 8px, -8px 8px;
+      transform: translateY(2px);
+    }
+  }
+
+  .floaty-grid-hero {
+    background-image: 
+      radial-gradient(circle at 10% 10%, rgba(168, 213, 227, 0.15) 2px, transparent 2px),
+      radial-gradient(circle at 90% 90%, rgba(168, 213, 227, 0.12) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 30% 70%, rgba(168, 213, 227, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 70% 30%, rgba(168, 213, 227, 0.1) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 50% 50%, rgba(168, 213, 227, 0.06) 1px, transparent 1px),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 25px,
+        rgba(168, 213, 227, 0.04) 25px,
+        rgba(168, 213, 227, 0.04) 26px,
+        transparent 26px,
+        transparent 50px
+      );
+    background-size: 80px 80px, 120px 120px, 100px 100px, 90px 90px, 60px 60px, 50px 50px;
+    animation: floatyHero 20s ease-in-out infinite;
+  }
+
+  @keyframes floatyHero {
+    0%, 100% {
+      background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+      transform: translateY(0px) rotate(0deg);
+    }
+    20% {
+      background-position: 15px 10px, -10px 15px, 20px -5px, -15px 20px, 10px 10px, 5px 5px;
+      transform: translateY(-3px) rotate(0.5deg);
+    }
+    40% {
+      background-position: 30px 20px, -20px 30px, 40px -10px, -30px 40px, 20px 20px, 10px 10px;
+      transform: translateY(0px) rotate(0deg);
+    }
+    60% {
+      background-position: 25px 15px, -15px 25px, 35px -8px, -25px 35px, 15px 15px, 8px 8px;
+      transform: translateY(3px) rotate(-0.5deg);
+    }
+    80% {
+      background-position: 10px 5px, -5px 10px, 15px -3px, -10px 15px, 5px 5px, 3px 3px;
+      transform: translateY(1px) rotate(0.2deg);
+    }
   }
 }
