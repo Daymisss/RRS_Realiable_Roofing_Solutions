@@ -29,16 +29,14 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <motion.div
-        className={`backdrop-blur-md rounded-2xl px-6 py-4 transition-all duration-300 ${
+        className={`backdrop-blur-md px-6 py-4 transition-all duration-300 ${
           isScrolled 
             ? 'bg-black/80 shadow-2xl' 
             : 'bg-black/60 shadow-xl'
         }`}
-        whileHover={{ scale: 1.02 }}
-        transition={{ duration: 0.2 }}
       >
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           {/* Logo */}
