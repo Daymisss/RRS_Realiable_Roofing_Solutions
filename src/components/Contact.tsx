@@ -381,7 +381,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-gradient-to-r from-red-500 to-red-600 rounded-xl p-6 text-white"
+              className="bg-gradient-to-r from-red-500 to-red-600 rounded-xl p-6 text-black"
             >
               <h4 className="text-xl font-bold mb-2">
                 Emergency Roofing Service

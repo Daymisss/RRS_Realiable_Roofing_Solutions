@@ -103,7 +103,7 @@ const Hero = () => {
               stiffness: 100,
               damping: 20
             }}
-            className="text-gray-900"
+            className="text-black"
           >
             <motion.h1
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
@@ -147,7 +147,7 @@ const Hero = () => {
                 type: "spring",
                 stiffness: 80
               }}
-              className="text-xl lg:text-2xl mb-8 text-gray-700"
+              className="text-xl lg:text-2xl mb-8 text-black"
             >
               Quality roof installation, repairs, and maintenance with unmatched workmanship in Auckland
             </motion.p>
@@ -274,7 +274,7 @@ const Hero = () => {
                   >
                     {item.number}
                   </motion.div>
-                  <div className="text-sm text-gray-600 group-hover:text-gray-700">
+                  <div className="text-sm text-black group-hover:text-gray-800">
                     {item.text}
                   </div>
                 </motion.div>

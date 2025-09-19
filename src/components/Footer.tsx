@@ -58,7 +58,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-black">
       {/* Main Footer Content */}
       <div className="container-custom py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
@@ -71,7 +71,7 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R</span>
+                <span className="text-black font-bold text-xl">R</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">Reliable Roofing</h3>
@@ -79,7 +79,7 @@ const Footer = () => {
               </div>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-black mb-6 leading-relaxed">
               Your trusted roofing partner in Auckland. We combine decades of experience 
               with quality materials and expert craftsmanship to protect your most valuable asset.
             </p>
@@ -89,21 +89,21 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-teal-400" />
                 <div>
-                  <div className="font-semibold">+64 9 123 4567</div>
+                  <div className="font-semibold text-black">+64 9 123 4567</div>
                   <div className="text-sm text-gray-400">24/7 Emergency Service</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-teal-400" />
                 <div>
-                  <div className="font-semibold">info@reliableroofing.co.nz</div>
+                  <div className="font-semibold text-black">info@reliableroofing.co.nz</div>
                   <div className="text-sm text-gray-400">General Inquiries</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-teal-400" />
                 <div>
-                  <div className="font-semibold">Auckland, New Zealand</div>
+                  <div className="font-semibold text-black">Auckland, New Zealand</div>
                   <div className="text-sm text-gray-400">Serving Greater Auckland Area</div>
                 </div>
               </div>
@@ -116,13 +116,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-black">Our Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
+                    className="text-black hover:text-teal-400 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -137,13 +137,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold mb-6">Company</h4>
+            <h4 className="text-lg font-semibold mb-6 text-black">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
+                    className="text-black hover:text-teal-400 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -158,13 +158,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold mb-6">Resources</h4>
+            <h4 className="text-lg font-semibold mb-6 text-black">Resources</h4>
             <ul className="space-y-3 mb-8">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
+                    className="text-black hover:text-teal-400 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -174,12 +174,12 @@ const Footer = () => {
 
             {/* Certifications */}
             <div>
-              <h5 className="font-semibold mb-4 text-teal-400">Our Certifications</h5>
+              <h5 className="font-semibold mb-4 text-black">Our Certifications</h5>
               <div className="grid grid-cols-2 gap-2">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center space-x-2 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{cert}</span>
+                    <span className="text-black">{cert}</span>
                   </div>
                 ))}
               </div>
@@ -198,21 +198,21 @@ const Footer = () => {
             <div className="flex items-center justify-center space-x-3">
               <Shield className="w-8 h-8 text-teal-400" />
               <div>
-                <div className="font-semibold">Fully Licensed</div>
+                <div className="font-semibold text-black">Fully Licensed</div>
                 <div className="text-sm text-gray-400">& Insured</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <Award className="w-8 h-8 text-teal-400" />
               <div>
-                <div className="font-semibold">20+ Years</div>
+                <div className="font-semibold text-black">20+ Years</div>
                 <div className="text-sm text-gray-400">Experience</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="w-8 h-8 text-green-400" />
               <div>
-                <div className="font-semibold">100%</div>
+                <div className="font-semibold text-black">100%</div>
                 <div className="text-sm text-gray-400">Satisfaction</div>
               </div>
             </div>
@@ -229,7 +229,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Social Media */}
             <div>
-              <h5 className="font-semibold mb-4">Follow Us</h5>
+              <h5 className="font-semibold mb-4 text-black">Follow Us</h5>
               <div className="flex space-x-4">
                 {[
                   { icon: Facebook, href: '#', label: 'Facebook' },
@@ -253,7 +253,7 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div>
-              <h5 className="font-semibold mb-4">Stay Updated</h5>
+              <h5 className="font-semibold mb-4 text-black">Stay Updated</h5>
               <p className="text-gray-400 text-sm mb-4">
                 Get roofing tips and special offers delivered to your inbox.
               </p>
@@ -261,12 +261,12 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-black placeholder-gray-400"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 py-2 bg-teal-600 hover:bg-teal-700 rounded-r-lg transition-colors duration-200"
+                  className="px-6 py-2 bg-teal-600 hover:bg-teal-700 rounded-r-lg transition-colors duration-200 text-black"
                 >
                   Subscribe
                 </motion.button>
@@ -280,18 +280,18 @@ const Footer = () => {
       <div className="bg-gray-950 py-6">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+            <div className="text-black text-sm">
               © 2024 Reliable Roofing Solutions. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-black hover:text-teal-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-black hover:text-teal-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-black hover:text-teal-400 transition-colors">
                 Cookie Policy
               </a>
             </div>

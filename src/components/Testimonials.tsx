@@ -164,9 +164,9 @@ const Testimonials = () => {
           variants={containerVariants}
           className="relative"
         >
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 md:p-12 text-white">
+          <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 md:p-12 text-black">
             <div className="max-w-4xl mx-auto">
-              <Quote className="w-12 h-12 text-white/30 mb-6" />
+              <Quote className="w-12 h-12 text-black/30 mb-6" />
               
               <motion.div
                 key={currentTestimonial}
@@ -208,7 +208,7 @@ const Testimonials = () => {
                         {testimonials[currentTestimonial].name}
                       </motion.div>
                       <motion.div 
-                        className="text-white/80"
+                        className="text-black/80"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
@@ -222,7 +222,7 @@ const Testimonials = () => {
                         transition={{ duration: 0.5, delay: 0.5 }}
                       >
                         <Calendar className="w-4 h-4" />
-                        <span className="text-sm text-white/70">
+                        <span className="text-sm text-black/70">
                           {testimonials[currentTestimonial].date}
                         </span>
                       </motion.div>
