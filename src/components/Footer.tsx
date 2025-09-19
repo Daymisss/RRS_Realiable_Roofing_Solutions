@@ -70,7 +70,7 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-xl">R</span>
               </div>
               <div>
@@ -87,21 +87,21 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-teal-400" />
+                <Phone className="w-5 h-5 text-teal-500" />
                 <div>
                   <div className="font-semibold text-black">+64 9 123 4567</div>
                   <div className="text-sm text-gray-400">24/7 Emergency Service</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-teal-400" />
+                <Mail className="w-5 h-5 text-teal-500" />
                 <div>
                   <div className="font-semibold text-black">info@reliableroofing.co.nz</div>
                   <div className="text-sm text-gray-400">General Inquiries</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-teal-400" />
+                <MapPin className="w-5 h-5 text-teal-500" />
                 <div>
                   <div className="font-semibold text-black">Auckland, New Zealand</div>
                   <div className="text-sm text-gray-400">Serving Greater Auckland Area</div>
@@ -122,7 +122,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-black hover:text-teal-400 transition-colors duration-200"
+                    className="text-black hover:text-teal-500 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -143,7 +143,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-black hover:text-teal-400 transition-colors duration-200"
+                    className="text-black hover:text-teal-500 transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -164,7 +164,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-black hover:text-teal-400 transition-colors duration-200"
+                    className="text-black hover:text-teal-500 transition-colors duration-200"
                   >
                     {link}
                   </a>

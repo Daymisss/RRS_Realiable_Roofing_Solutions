@@ -160,7 +160,7 @@ const Services = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-4 text-teal-600 font-semibold flex items-center group"
+                  className="mt-4 text-teal-500 font-semibold flex items-center group"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -223,7 +223,7 @@ const Services = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Need a Roofing Expert?
             </h3>

@@ -34,8 +34,8 @@ const Header = () => {
         <motion.div
           className={`backdrop-blur-md rounded-2xl px-6 py-3 transition-all duration-300 shadow-2xl relative ${
             isScrolled 
-              ? 'bg-black/30' 
-              : 'bg-black/20'
+              ? 'bg-black/10' 
+              : 'bg-black/5'
           }`}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
@@ -92,7 +92,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.05 }}
-                className="text-black hover:text-teal-600 font-medium transition-colors duration-200"
+                className="text-black hover:text-teal-500 font-medium transition-colors duration-200"
               >
                 {item.name}
               </motion.a>
@@ -128,7 +128,7 @@ const Header = () => {
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 rounded-2xl backdrop-blur-md bg-black/20 shadow-2xl"
+          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 rounded-2xl backdrop-blur-md bg-black/10 shadow-2xl"
         >
           <div className="py-4 space-y-4 px-6">
             {/* Mobile Logo */}
@@ -168,7 +168,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-black hover:text-teal-600 font-medium transition-colors duration-200"
+                className="block text-black hover:text-teal-500 font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>

@@ -117,7 +117,7 @@ const Hero = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-teal-400/30 rounded-full"
+            className="absolute w-1 h-1 bg-teal-500/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -236,7 +236,7 @@ const Hero = () => {
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-r from-teal-500 to-teal-600 opacity-0 group-hover:opacity-100"
                   initial={{ x: "-100%" }}
                   whileHover={{ x: "0%" }}
                   transition={{ duration: 0.3 }}
@@ -310,12 +310,12 @@ const Hero = () => {
                       scale: 1.1
                     }}
                     transition={{ duration: 0.5 }}
-                    className="w-8 h-8 mx-auto mb-2 teal-primary group-hover:text-teal-600"
+                    className="w-8 h-8 mx-auto mb-2 teal-primary group-hover:text-teal-500"
                   >
                     <item.icon className="w-full h-full" />
                   </motion.div>
                   <motion.div 
-                    className="text-2xl font-bold group-hover:text-teal-600"
+                    className="text-2xl font-bold group-hover:text-teal-500"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                   >
