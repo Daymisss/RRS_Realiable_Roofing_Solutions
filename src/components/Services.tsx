@@ -174,12 +174,7 @@ const Services = () => {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover group relative overflow-hidden"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(242, 232, 232, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%)',
-                  border: '1px solid rgba(166, 213, 227, 0.3)',
-                  boxShadow: '0 8px 32px rgba(166, 213, 227, 0.2), 0 0 0 1px rgba(166, 213, 227, 0.1)'
-                }}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover group"
               >
                 <motion.div 
                   className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
@@ -236,13 +231,7 @@ const Services = () => {
                 key={service.title}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover relative overflow-hidden"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(242, 232, 232, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%)',
-                  border: '1px solid rgba(166, 213, 227, 0.3)',
-                  borderLeft: '4px solid #A6D5E3',
-                  boxShadow: '0 8px 32px rgba(166, 213, 227, 0.2), 0 0 0 1px rgba(166, 213, 227, 0.1)'
-                }}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover border-l-4 border-teal-500"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
