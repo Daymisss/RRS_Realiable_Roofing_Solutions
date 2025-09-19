@@ -32,11 +32,7 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <motion.div
-        className={`backdrop-blur-md px-6 py-4 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-black/80 shadow-2xl' 
-            : 'bg-black/60 shadow-xl'
-        }`}
+        className="backdrop-blur-md px-6 py-4 transition-all duration-300"
       >
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           {/* Logo */}
