@@ -32,7 +32,7 @@ const Header = () => {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       >
         <motion.div
-          className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative"
+          className="backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-2xl relative rounded-2xl mx-4"
           style={{
             background: `
               linear-gradient(180deg, rgba(242, 232, 232, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%),
@@ -44,7 +44,7 @@ const Header = () => {
                 rgba(166, 213, 227, 0.1) 2px
               )
             `,
-            border: '1px solid rgba(166, 213, 227, 0.3)'
+            border: '3px solid rgba(166, 213, 227, 0.5)'
           }}
         >
         <div className="flex items-center justify-between max-w-6xl mx-auto">
@@ -135,7 +135,7 @@ const Header = () => {
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl"
+          className="lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 backdrop-blur-md shadow-2xl rounded-2xl mx-4"
           style={{
             background: `
               linear-gradient(180deg, rgba(242, 232, 232, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%),
@@ -147,7 +147,7 @@ const Header = () => {
                 rgba(166, 213, 227, 0.1) 2px
               )
             `,
-            border: '1px solid rgba(166, 213, 227, 0.3)'
+            border: '3px solid rgba(166, 213, 227, 0.5)'
           }}
         >
           <div className="py-4 space-y-4 px-6">
