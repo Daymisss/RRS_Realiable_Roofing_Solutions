@@ -58,7 +58,23 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-black">
+    <footer className="relative overflow-hidden text-black">
+      {/* Teal/Cream Background with Dynamic Grid */}
+      <div
+        className="absolute inset-0 dynamic-grid"
+        style={{
+          background: `
+            linear-gradient(135deg, rgba(168, 213, 227, 0.3) 0%, rgba(242, 240, 234, 0.5) 50%, rgba(168, 213, 227, 0.2) 100%),
+            repeating-linear-gradient(
+              120deg,
+              transparent,
+              transparent 22px,
+              rgba(168, 213, 227, 0.08) 22px,
+              rgba(168, 213, 227, 0.08) 23px
+            )
+          `
+        }}
+      />
       {/* Main Footer Content */}
       <div className="container-custom py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">

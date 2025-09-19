@@ -77,14 +77,52 @@
   }
   
   .teal-primary {
-    color: #A6D5E3;
+    color: #A8D5E3;
   }
   
   .bg-teal-primary {
-    background-color: #A6D5E3;
+    background-color: #A8D5E3;
   }
   
   .border-teal-primary {
-    border-color: #A6D5E3;
+    border-color: #A8D5E3;
+  }
+
+  .cream-primary {
+    color: #F2F0EA;
+  }
+  
+  .bg-cream-primary {
+    background-color: #F2F0EA;
+  }
+  
+  .border-cream-primary {
+    border-color: #F2F0EA;
+  }
+
+  .section-gradient-teal {
+    background: linear-gradient(135deg, rgba(168, 213, 227, 0.1) 0%, rgba(242, 240, 234, 0.2) 100%);
+  }
+
+  .section-gradient-cream {
+    background: linear-gradient(135deg, rgba(242, 240, 234, 0.3) 0%, rgba(168, 213, 227, 0.1) 100%);
+  }
+
+  .dynamic-grid {
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(168, 213, 227, 0.1) 2px,
+        rgba(168, 213, 227, 0.1) 3px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(168, 213, 227, 0.05) 2px,
+        rgba(168, 213, 227, 0.05) 3px
+      );
   }
 }

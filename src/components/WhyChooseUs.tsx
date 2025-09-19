@@ -102,7 +102,23 @@ const WhyChooseUs = () => {
   }
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding relative overflow-hidden">
+      {/* Teal/Cream Background with Dynamic Grid */}
+      <div
+        className="absolute inset-0 dynamic-grid"
+        style={{
+          background: `
+            linear-gradient(135deg, rgba(168, 213, 227, 0.18) 0%, rgba(242, 240, 234, 0.4) 50%, rgba(168, 213, 227, 0.12) 100%),
+            repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 16px,
+              rgba(168, 213, 227, 0.05) 16px,
+              rgba(168, 213, 227, 0.05) 17px
+            )
+          `
+        }}
+      />
       <div className="container-custom">
         <motion.div
           ref={ref}

@@ -110,7 +110,23 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding relative overflow-hidden">
+      {/* Teal/Cream Background with Dynamic Grid */}
+      <div
+        className="absolute inset-0 dynamic-grid"
+        style={{
+          background: `
+            linear-gradient(135deg, rgba(242, 240, 234, 0.35) 0%, rgba(168, 213, 227, 0.25) 50%, rgba(242, 240, 234, 0.2) 100%),
+            repeating-linear-gradient(
+              75deg,
+              transparent,
+              transparent 18px,
+              rgba(168, 213, 227, 0.06) 18px,
+              rgba(168, 213, 227, 0.06) 19px
+            )
+          `
+        }}
+      />
       <div className="container-custom">
         <motion.div
           ref={ref}

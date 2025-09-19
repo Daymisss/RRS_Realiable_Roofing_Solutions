@@ -83,18 +83,18 @@ const Services = () => {
 
   return (
     <section id="services" className="section-padding relative overflow-hidden">
-      {/* Dark Background with Teal Accents */}
-      <div 
-        className="absolute inset-0"
+      {/* Teal/Cream Background with Dynamic Grid */}
+      <div
+        className="absolute inset-0 dynamic-grid"
         style={{
           background: `
-            linear-gradient(180deg, rgba(242, 232, 232, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%),
+            linear-gradient(135deg, rgba(242, 240, 234, 0.4) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%),
             repeating-linear-gradient(
-              0deg,
+              30deg,
               transparent,
-              transparent 1px,
-              rgba(166, 213, 227, 0.1) 1px,
-              rgba(166, 213, 227, 0.1) 2px
+              transparent 15px,
+              rgba(168, 213, 227, 0.05) 15px,
+              rgba(168, 213, 227, 0.05) 16px
             )
           `
         }}
