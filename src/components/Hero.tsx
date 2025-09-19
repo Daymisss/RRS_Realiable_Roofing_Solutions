@@ -66,6 +66,53 @@ const Hero = () => {
           transition={{ duration: 1.5, delay: 0.5 }}
         />
         
+        {/* Animated Perspective Grid */}
+        <motion.div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px',
+            transformOrigin: 'center center'
+          }}
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.1, 0.3],
+            backgroundPosition: ['0px 0px', '20px 20px', '0px 0px']
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Secondary Animated Grid */}
+        <motion.div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+            transformOrigin: 'center center'
+          }}
+          animate={{
+            scale: [1.2, 0.8, 1.2],
+            opacity: [0.2, 0.4, 0.2],
+            backgroundPosition: ['0px 0px', '-30px -30px', '0px 0px']
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+        
         {/* Floating particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
