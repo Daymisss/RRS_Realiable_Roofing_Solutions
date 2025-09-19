@@ -1,9 +1,8 @@
 'use client'
 
-import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
+import { useRef } from 'react'
 import { 
   Home, 
   Wrench, 
@@ -12,46 +11,12 @@ import {
   Sun, 
   Shield,
   ArrowRight,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Pause
+  CheckCircle
 } from 'lucide-react'
 
 const Services = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
-  const [direction, setDirection] = useState(0)
-
-  // Auto-play functionality
-  useEffect(() => {
-    if (!isAutoPlaying) return
-    
-    const interval = setInterval(() => {
-      setDirection(1)
-      setCurrentSlide((prev) => (prev + 1) % coreServices.length)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [isAutoPlaying, coreServices.length])
-
-  const nextSlide = () => {
-    setDirection(1)
-    setCurrentSlide((prev) => (prev + 1) % coreServices.length)
-  }
-
-  const prevSlide = () => {
-    setDirection(-1)
-    setCurrentSlide((prev) => (prev - 1 + coreServices.length) % coreServices.length)
-  }
-
-  const goToSlide = (index: number) => {
-    setDirection(index > currentSlide ? 1 : -1)
-    setCurrentSlide(index)
-  }
 
   const coreServices = [
     {
@@ -116,36 +81,6 @@ const Services = () => {
     }
   }
 
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction > 0 ? 45 : -45
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      rotateY: 0
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction < 0 ? 45 : -45
-    })
-  }
-
-  const slideTransition = {
-    x: { type: "spring", stiffness: 300, damping: 30 },
-    opacity: { duration: 0.2 },
-    scale: { duration: 0.3 },
-    rotateY: { duration: 0.4 }
-  }
-
   return (
     <section id="services" className="section-padding relative overflow-hidden">
       {/* Teal/Cream Background with Dynamic Grid */}
@@ -153,14 +88,7 @@ const Services = () => {
         className="absolute inset-0 dynamic-grid"
         style={{
           background: `
-            linear-gradient(135deg, rgba(242, 240, 234, 0.4) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%),
-            repeating-linear-gradient(
-              30deg,
-              transparent,
-              transparent 15px,
-              rgba(168, 213, 227, 0.05) 15px,
-              rgba(168, 213, 227, 0.05) 16px
-            )
+            linear-gradient(135deg, rgba(242, 240, 234, 0.4) 0%, rgba(168, 213, 227, 0.2) 50%, rgba(242, 240, 234, 0.3) 100%)
           `
         }}
       />
@@ -215,7 +143,7 @@ const Services = () => {
           </motion.p>
         </motion.div>
 
-        {/* Core Services Carousel */}
+        {/* Core Services */}
         <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -228,151 +156,53 @@ const Services = () => {
           >
             Core Services
           </motion.h3>
-          
-          {/* Carousel Container */}
-          <div className="relative max-w-4xl mx-auto">
-            <div className="relative h-96 overflow-hidden rounded-2xl">
-              <AnimatePresence mode="wait" custom={direction}>
-                <motion.div
-                  key={currentSlide}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={slideTransition}
-                  className="absolute inset-0 flex items-center justify-center"
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {coreServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                variants={itemVariants}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover group"
+              >
+                <motion.div 
+                  className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                  whileHover={{ 
+                    rotate: [0, -5, 5, 0],
+                    scale: 1.1
+                  }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <motion.div
-                    className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto transform-gpu"
-                    whileHover={{ 
-                      scale: 1.02,
-                      boxShadow: "0 25px 50px rgba(0,0,0,0.15)"
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="flex flex-col lg:flex-row items-center gap-8">
-                      {/* Icon and Content */}
-                      <motion.div 
-                        className="flex-shrink-0"
-                        whileHover={{ 
-                          rotate: [0, -10, 10, 0],
-                          scale: 1.1
-                        }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <div className="w-24 h-24 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
-                          {React.createElement(coreServices[currentSlide].icon, { className: "w-12 h-12 text-white" })}
-                        </div>
-                      </motion.div>
-                      
-                      <div className="flex-1 text-center lg:text-left">
-                        <motion.h4 
-                          className="text-3xl font-bold text-gray-900 mb-4"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.2 }}
-                        >
-                          {coreServices[currentSlide].title}
-                        </motion.h4>
-                        <motion.p 
-                          className="text-lg text-gray-600 mb-6"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.3 }}
-                        >
-                          {coreServices[currentSlide].description}
-                        </motion.p>
-                        <motion.div 
-                          className="grid grid-cols-2 gap-2 mb-6"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.4 }}
-                        >
-                          {coreServices[currentSlide].features.map((feature, featureIndex) => (
-                            <motion.div
-                              key={featureIndex}
-                              className="flex items-center text-sm text-gray-600"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: 0.5 + featureIndex * 0.1 }}
-                            >
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
-                            </motion.div>
-                          ))}
-                        </motion.div>
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold px-6 py-3 rounded-lg flex items-center mx-auto lg:mx-0 group"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.6 }}
-                        >
-                          Learn More
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </motion.button>
-                      </div>
-                    </div>
-                  </motion.div>
+                  <service.icon className="w-8 h-8 text-white" />
                 </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Carousel Controls */}
-            <div className="flex items-center justify-center mt-8 space-x-4">
-              {/* Previous Button */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={prevSlide}
-                className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300"
-              >
-                <ChevronLeft className="w-6 h-6 text-teal-500" />
-              </motion.button>
-
-              {/* Play/Pause Button */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300"
-              >
-                {isAutoPlaying ? (
-                  <Pause className="w-6 h-6 text-white" />
-                ) : (
-                  <Play className="w-6 h-6 text-white" />
-                )}
-              </motion.button>
-
-              {/* Next Button */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={nextSlide}
-                className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300"
-              >
-                <ChevronRight className="w-6 h-6 text-teal-500" />
-              </motion.button>
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {coreServices.map((_, index) => (
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  {service.title}
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
                 <motion.button
-                  key={index}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.8 }}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-teal-500 scale-125' 
-                      : 'bg-gray-300 hover:bg-teal-300'
-                  }`}
-                />
-              ))}
-            </div>
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="mt-4 text-teal-500 font-semibold flex items-center group"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
